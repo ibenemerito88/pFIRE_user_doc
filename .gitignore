@@ -1,0 +1,5 @@
+# Input images
+*.image
+*.png
+*.dcm
+*.xdmf.h5

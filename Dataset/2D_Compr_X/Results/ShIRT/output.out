@@ -1,0 +1,2513 @@
+
+ ANSYS Academic Research                           
+
+
+ *------------------------------------------------------------------*
+ |                                                                  |
+ |   W E L C O M E   T O   T H E   A N S Y S (R)  P R O G R A M     |
+ |                                                                  |
+ *------------------------------------------------------------------*
+
+
+
+
+ ***************************************************************
+ *            ANSYS Release 17.2     LEGAL NOTICES             *
+ ***************************************************************
+ *                                                             *
+ * Copyright 2016 SAS IP, Inc.  All rights reserved.           *
+ * Unauthorized use, distribution or duplication is            *
+ * prohibited.                                                 *
+ *                                                             *
+ * Ansys is a registered trademark of ANSYS, Inc. or its       *
+ * subsidiaries in the United States or other countries.       *
+ * See the ANSYS, Inc. online documentation or the ANSYS, Inc. *
+ * documentation CD or online help for the complete Legal      *
+ * Notice.                                                     *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * THIS ANSYS SOFTWARE PRODUCT AND PROGRAM DOCUMENTATION       *
+ * INCLUDE TRADE SECRETS AND CONFIDENTIAL AND PROPRIETARY      *
+ * PRODUCTS OF ANSYS, INC., ITS SUBSIDIARIES, OR LICENSORS.    *
+ * The software products and documentation are furnished by    *
+ * ANSYS, Inc. or its subsidiaries under a software license    *
+ * agreement that contains provisions concerning               *
+ * non-disclosure, copying, length and nature of use,          *
+ * compliance with exporting laws, warranties, disclaimers,    *
+ * limitations of liability, and remedies, and other           *
+ * provisions.  The software products and documentation may be *
+ * used, disclosed, transferred, or copied only in accordance  *
+ * with the terms and conditions of that software license      *
+ * agreement.                                                  *
+ *                                                             *
+ * ANSYS, Inc. is a UL registered                              *
+ * ISO 9001:2008 company.                                      *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * This product is subject to U.S. laws governing export and   *
+ * re-export.                                                  *
+ *                                                             *
+ * For U.S. Government users, except as specifically granted   *
+ * by the ANSYS, Inc. software license agreement, the use,     *
+ * duplication, or disclosure by the United States Government  *
+ * is subject to restrictions stated in the ANSYS, Inc.        *
+ * software license agreement and FAR 12.212 (for non-DOD      *
+ * licenses).                                                  *
+ *                                                             *
+ ***************************************************************
+
+
+ AFTER YOU HAVE READ, UNDERSTOOD, AND AGREED TO THE PREVIOUS NOTICES,
+ PRESS <CR> OR <ENTER> TO CONTINUE
+ Release 17.2
+     
+ Point Releases and Patches installed:   
+     
+ ANSYS, Inc. Products Release 17.2   
+ ANSYS Mechanical Products Release 17.2  
+ ANSYS Customization Files for User Programmable Features Release 17.2   
+ ANSYS Autodyn Release 17.2  
+ ANSYS LS-DYNA Release 17.2  
+ ANSYS CFX (includes ANSYS CFD-Post) Release 17.2
+ ANSYS Fluent (includes ANSYS CFD-Post) Release 17.2 
+ ANSYS TurboGrid Release 17.2
+ ANSYS Polyflow (includes ANSYS CFD-Post) Release 17.2   
+ ANSYS CFD-Post only Release 17.2
+ ANSYS Forte Release 17.2
+ ANSYS Chemkin Release 17.2  
+ ANSYS ICEM CFD Release 17.2 
+ ANSYS Composite PrepPost Release 17.2   
+ ANSYS Icepak (includes ANSYS CFD-Post) Release 17.2 
+ ANSYS Remote Solve Manager Standalone Services Release 17.2 
+ ACIS Release 17.2   
+ Catia, Version 5 Release 17.2   
+ NX Release 17.2 
+ Parasolid Release 17.2  
+ ANSYS, Inc. License Manager Release 17.2
+
+
+          *****  ANSYS COMMAND LINE ARGUMENTS  *****
+  INITIAL JOBNAME              = input                                                                                                                                                                                                                                                   
+  BATCH MODE REQUESTED (-b)    = LIST
+  INPUT FILE COPY MODE (-c)    = COPY
+  DESIGNXPLORER REQUESTED
+  INPUT FILE NAME              = /shared/multisim2/DVC/ShIRTImagesResults/me1ibe/compression_x/Results/Specimen1/VOI0/NodeSpacing20/input.txt
+  OUTPUT FILE NAME             = /shared/multisim2/DVC/ShIRTImagesResults/me1ibe/compression_x/Results/Specimen1/VOI0/NodeSpacing20/output.out
+  START-UP FILE MODE           = READ  
+  STOP FILE MODE               = READ  
+  LANGUAGE                     = en-us               
+  INITIAL DIRECTORY = /shared/multisim2/DVC/ShIRTImagesResults/me1ibe/compression_x/Results/Specimen1/VOI0/NodeSpacing20
+
+ RELEASE= Release 17.2         BUILD= 17.2      UP20160718   VERSION=LINUX x64   
+ CURRENT JOBNAME=input  16:14:26  JUL 08, 2019 CP=      0.182
+
+     1  fini
+     2  /cle
+     3      
+     4  /prep7  
+     5      
+     6  ET,1,SOLID185   
+     7      
+     8  /INPUT,'nodes','txt'
+     9  /INPUT,'elements','txt' 
+    10      
+    11  MP,EX,1,17000   
+    12  MP,PRXY,1,0.3   
+    13      
+    14      
+    15  /FORMAT, , F15.10, 15, 10, 1000000000, ,
+    16      
+    17  /solu   
+    18      
+    19  /INPUT,'disp','txt' 
+    20      
+    21  allsel  
+    22  eqslv,pcg   
+    23  solve   
+    24  FINISH  
+    25      
+    26      
+    27  /prep7  
+    28      
+    29  /set, last  
+    30  CDWRITE,DB,input,CDB
+    31      
+    32      
+    33      
+    34  /POST1  
+    35      
+    36  /OUTPUT,ANSYS_results,txt     ! redirect output to a file called "ANSYS_results.txt" with principal strains 
+    37  PRNSOL, EPEL, PRIN  
+    38  /out
+    39      
+    40  /OUTPUT,ANSYS_results_xyz,txt     ! redirect output to a file called "ANSYS_results_xyz.txt" with strain components 
+    41  PRNSOL, EPEL, COMP  
+    42  /out
+    43      
+    44      
+    45  ! Create element table, column 1 to 6 is components, 7 to 9 are principal strain
+    46  ETABLE,StrainXX,EPEL,X,avg  
+    47  ETABLE,StrainYY,EPEL,Y,avg  
+    48  ETABLE,StrainZZ,EPEL,Z,avg  
+    49  ETABLE,StrainXY,EPEL,XY,avg 
+    50  ETABLE,StrainYZ,EPEL,YZ,avg 
+    51  ETABLE,StrainXZ,EPEL,XZ,avg 
+    52      
+    53  ETABLE,Strain1,EPEL,1,avg   
+    54  ETABLE,Strain2,EPEL,2,avg   
+    55  ETABLE,Strain3,EPEL,3,avg   
+    56      
+    57  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
+    58      
+    59      
+    60  *get,nElements,ELEM,0,count 
+    61  *status,nElements   
+    62      
+    63      
+    64  !Create an array to store strain components 
+    65  *DIM,vData,ARRAY,nElements,7
+    66      
+    67  !Create an array to store strain principal  
+    68  *DIM,vData2,ARRAY,nElements,4   
+    69      
+    70  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
+    71  ! Loop over each element
+    72      
+    73  N = 0   
+    74      
+    75  *do,i,1,nElements   
+    76      
+    77       *get,ElemNum,ELEM,N,NXTH   
+    78        vData(i,1) = ElemNum  
+    79       *get,vData(i,2),ETAB,1,ELEM,ElemNum
+    80       *get,vData(i,3),ETAB,2,ELEM,ElemNum
+    81       *get,vData(i,4),ETAB,3,ELEM,ElemNum
+    82       *get,vData(i,5),ETAB,4,ELEM,ElemNum
+    83       *get,vData(i,6),ETAB,5,ELEM,ElemNum
+    84       *get,vData(i,7),ETAB,6,ELEM,ElemNum
+    85      
+    86      
+    87       vData2(i,1) = ElemNum  
+    88       *get,vData2(i,2),ETAB,7,ELEM,ElemNum   
+    89       *get,vData2(i,3),ETAB,8,ELEM,ElemNum   
+    90       *get,vData2(i,4),ETAB,9,ELEM,ElemNum   
+    91      
+    92       N = ElemNum
+    93      
+    94  *enddo  
+    95      
+    96      
+    97  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    98      
+    99  !output results into ASCII file StrainTensor.txt
+   100  *cfopen,ANSYS_results_elements_xyz,txt  
+   101  *vwrite,vData(1,1),vData(1,2),vData(1,3),vData(1,4),vData(1,5),vData(1,6),vData(1,7)
+   102  (F10.0,TL1,' ','  'F15.10,'  ',F15.10,'  ',F15.10,'  ',F15.10,'  ',F15.10,'  ',F15.10)  
+   103  *cfclos 
+   104      
+   105      
+   106  !output results into ASCII file StrainPrincipal.txt 
+   107  *cfopen,ANSYS_results_elements,txt  
+   108  *vwrite,vData2(1,1),vData2(1,2),vData2(1,3),vData2(1,4) 
+   109  (F10.0,TL1,' ','  'F15.10,'  ',F15.10,'  ',F15.10)  
+   110  *cfclos 
+   111      
+   112      
+   113      
+   114      
+   115      
+   116      
+   117      
+   118      
+   119  finish  
+
+ RUN SETUP PROCEDURE FROM FILE= /usr/local/packages/apps/ansys/17.2/v172/ansys/apdl/start.ans
+
+ /INPUT FILE= /usr/local/packages/apps/ansys/17.2/v172/ansys/apdl/start.ans  LINE=       0
+
+ CLEAR DATABASE AND RERUN START.ANS
+
+ RUN SETUP PROCEDURE FROM FILE= /usr/local/packages/apps/ansys/17.2/v172/ansys/apdl/start.ans
+
+ ANSYS Academic Research                           
+
+ /INPUT FILE= /usr/local/packages/apps/ansys/17.2/v172/ansys/apdl/start.ans  LINE=       0
+
+ *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE Release 17.2     17.2     ***
+ ANSYS Academic Research                           
+ 00210476  VERSION=LINUX x64     16:14:26  JUL 08, 2019 CP=      0.319
+
+                                                                               
+
+
+
+          ***** ANSYS ANALYSIS DEFINITION (PREP7) *****
+
+ ELEMENT TYPE       1 IS SOLID185     3-D 8-NODE STRUCTURAL SOLID 
+  KEYOPT( 1- 6)=        0      0      0        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY    UZ  
+  THREE-DIMENSIONAL MODEL
+
+ /INPUT FILE= nodes.txt  LINE=       0
+
+ NODE         1  KCS=      0  X,Y,Z=-0.14500E-001-0.95000E-002  0.0000     
+
+ NODE         2  KCS=      0  X,Y,Z=-0.14500E-001 0.10500E-001  0.0000     
+
+ NODE         3  KCS=      0  X,Y,Z=-0.14500E-001 0.30500E-001  0.0000     
+
+ NODE         4  KCS=      0  X,Y,Z=-0.14500E-001 0.50500E-001  0.0000     
+
+ NODE         5  KCS=      0  X,Y,Z=-0.14500E-001 0.70500E-001  0.0000     
+
+ NODE         6  KCS=      0  X,Y,Z=-0.14500E-001 0.90500E-001  0.0000     
+
+ NODE         7  KCS=      0  X,Y,Z=-0.14500E-001 0.11050       0.0000     
+
+ NODE         8  KCS=      0  X,Y,Z=-0.14500E-001 0.13050       0.0000     
+
+ NODE         9  KCS=      0  X,Y,Z=-0.14500E-001 0.15050       0.0000     
+
+ NODE        10  KCS=      0  X,Y,Z=-0.14500E-001 0.17050       0.0000     
+
+ NODE        11  KCS=      0  X,Y,Z=-0.14500E-001 0.19050       0.0000     
+
+ NODE        12  KCS=      0  X,Y,Z=-0.14500E-001 0.21050       0.0000     
+
+ NODE        13  KCS=      0  X,Y,Z=-0.14500E-001 0.23050       0.0000     
+
+ NODE        14  KCS=      0  X,Y,Z= 0.55000E-002-0.95000E-002  0.0000     
+
+ NODE        15  KCS=      0  X,Y,Z= 0.55000E-002 0.10500E-001  0.0000     
+
+ NODE        16  KCS=      0  X,Y,Z= 0.55000E-002 0.30500E-001  0.0000     
+
+ NODE        17  KCS=      0  X,Y,Z= 0.55000E-002 0.50500E-001  0.0000     
+
+ NODE        18  KCS=      0  X,Y,Z= 0.55000E-002 0.70500E-001  0.0000     
+
+ NODE        19  KCS=      0  X,Y,Z= 0.55000E-002 0.90500E-001  0.0000     
+
+ NODE        20  KCS=      0  X,Y,Z= 0.55000E-002 0.11050       0.0000     
+
+ NODE        21  KCS=      0  X,Y,Z= 0.55000E-002 0.13050       0.0000     
+
+ NODE        22  KCS=      0  X,Y,Z= 0.55000E-002 0.15050       0.0000     
+
+ NODE        23  KCS=      0  X,Y,Z= 0.55000E-002 0.17050       0.0000     
+
+ NODE        24  KCS=      0  X,Y,Z= 0.55000E-002 0.19050       0.0000     
+
+ NODE        25  KCS=      0  X,Y,Z= 0.55000E-002 0.21050       0.0000     
+
+ NODE        26  KCS=      0  X,Y,Z= 0.55000E-002 0.23050       0.0000     
+
+ NODE        27  KCS=      0  X,Y,Z= 0.25500E-001-0.95000E-002  0.0000     
+
+ NODE        28  KCS=      0  X,Y,Z= 0.25500E-001 0.10500E-001  0.0000     
+
+ NODE        29  KCS=      0  X,Y,Z= 0.25500E-001 0.30500E-001  0.0000     
+
+ NODE        30  KCS=      0  X,Y,Z= 0.25500E-001 0.50500E-001  0.0000     
+
+ NODE        31  KCS=      0  X,Y,Z= 0.25500E-001 0.70500E-001  0.0000     
+
+ NODE        32  KCS=      0  X,Y,Z= 0.25500E-001 0.90500E-001  0.0000     
+
+ NODE        33  KCS=      0  X,Y,Z= 0.25500E-001 0.11050       0.0000     
+
+ NODE        34  KCS=      0  X,Y,Z= 0.25500E-001 0.13050       0.0000     
+
+ NODE        35  KCS=      0  X,Y,Z= 0.25500E-001 0.15050       0.0000     
+
+ NODE        36  KCS=      0  X,Y,Z= 0.25500E-001 0.17050       0.0000     
+
+ NODE        37  KCS=      0  X,Y,Z= 0.25500E-001 0.19050       0.0000     
+
+ NODE        38  KCS=      0  X,Y,Z= 0.25500E-001 0.21050       0.0000     
+
+ NODE        39  KCS=      0  X,Y,Z= 0.25500E-001 0.23050       0.0000     
+
+ NODE        40  KCS=      0  X,Y,Z= 0.45500E-001-0.95000E-002  0.0000     
+
+ NODE        41  KCS=      0  X,Y,Z= 0.45500E-001 0.10500E-001  0.0000     
+
+ NODE        42  KCS=      0  X,Y,Z= 0.45500E-001 0.30500E-001  0.0000     
+
+ NODE        43  KCS=      0  X,Y,Z= 0.45500E-001 0.50500E-001  0.0000     
+
+ NODE        44  KCS=      0  X,Y,Z= 0.45500E-001 0.70500E-001  0.0000     
+
+ NODE        45  KCS=      0  X,Y,Z= 0.45500E-001 0.90500E-001  0.0000     
+
+ NODE        46  KCS=      0  X,Y,Z= 0.45500E-001 0.11050       0.0000     
+
+ NODE        47  KCS=      0  X,Y,Z= 0.45500E-001 0.13050       0.0000     
+
+ NODE        48  KCS=      0  X,Y,Z= 0.45500E-001 0.15050       0.0000     
+
+ NODE        49  KCS=      0  X,Y,Z= 0.45500E-001 0.17050       0.0000     
+
+ NODE        50  KCS=      0  X,Y,Z= 0.45500E-001 0.19050       0.0000     
+
+ NODE        51  KCS=      0  X,Y,Z= 0.45500E-001 0.21050       0.0000     
+
+ NODE        52  KCS=      0  X,Y,Z= 0.45500E-001 0.23050       0.0000     
+
+ NODE        53  KCS=      0  X,Y,Z= 0.65500E-001-0.95000E-002  0.0000     
+
+ NODE        54  KCS=      0  X,Y,Z= 0.65500E-001 0.10500E-001  0.0000     
+
+ NODE        55  KCS=      0  X,Y,Z= 0.65500E-001 0.30500E-001  0.0000     
+
+ NODE        56  KCS=      0  X,Y,Z= 0.65500E-001 0.50500E-001  0.0000     
+
+ NODE        57  KCS=      0  X,Y,Z= 0.65500E-001 0.70500E-001  0.0000     
+
+ NODE        58  KCS=      0  X,Y,Z= 0.65500E-001 0.90500E-001  0.0000     
+
+ NODE        59  KCS=      0  X,Y,Z= 0.65500E-001 0.11050       0.0000     
+
+ NODE        60  KCS=      0  X,Y,Z= 0.65500E-001 0.13050       0.0000     
+
+ NODE        61  KCS=      0  X,Y,Z= 0.65500E-001 0.15050       0.0000     
+
+ NODE        62  KCS=      0  X,Y,Z= 0.65500E-001 0.17050       0.0000     
+
+ NODE        63  KCS=      0  X,Y,Z= 0.65500E-001 0.19050       0.0000     
+
+ NODE        64  KCS=      0  X,Y,Z= 0.65500E-001 0.21050       0.0000     
+
+ NODE        65  KCS=      0  X,Y,Z= 0.65500E-001 0.23050       0.0000     
+
+ NODE        66  KCS=      0  X,Y,Z= 0.85500E-001-0.95000E-002  0.0000     
+
+ NODE        67  KCS=      0  X,Y,Z= 0.85500E-001 0.10500E-001  0.0000     
+
+ NODE        68  KCS=      0  X,Y,Z= 0.85500E-001 0.30500E-001  0.0000     
+
+ NODE        69  KCS=      0  X,Y,Z= 0.85500E-001 0.50500E-001  0.0000     
+
+ NODE        70  KCS=      0  X,Y,Z= 0.85500E-001 0.70500E-001  0.0000     
+
+ NODE        71  KCS=      0  X,Y,Z= 0.85500E-001 0.90500E-001  0.0000     
+
+ NODE        72  KCS=      0  X,Y,Z= 0.85500E-001 0.11050       0.0000     
+
+ NODE        73  KCS=      0  X,Y,Z= 0.85500E-001 0.13050       0.0000     
+
+ NODE        74  KCS=      0  X,Y,Z= 0.85500E-001 0.15050       0.0000     
+
+ NODE        75  KCS=      0  X,Y,Z= 0.85500E-001 0.17050       0.0000     
+
+ NODE        76  KCS=      0  X,Y,Z= 0.85500E-001 0.19050       0.0000     
+
+ NODE        77  KCS=      0  X,Y,Z= 0.85500E-001 0.21050       0.0000     
+
+ NODE        78  KCS=      0  X,Y,Z= 0.85500E-001 0.23050       0.0000     
+
+ NODE        79  KCS=      0  X,Y,Z= 0.10550     -0.95000E-002  0.0000     
+
+ NODE        80  KCS=      0  X,Y,Z= 0.10550      0.10500E-001  0.0000     
+
+ NODE        81  KCS=      0  X,Y,Z= 0.10550      0.30500E-001  0.0000     
+
+ NODE        82  KCS=      0  X,Y,Z= 0.10550      0.50500E-001  0.0000     
+
+ NODE        83  KCS=      0  X,Y,Z= 0.10550      0.70500E-001  0.0000     
+
+ NODE        84  KCS=      0  X,Y,Z= 0.10550      0.90500E-001  0.0000     
+
+ NODE        85  KCS=      0  X,Y,Z= 0.10550      0.11050       0.0000     
+
+ NODE        86  KCS=      0  X,Y,Z= 0.10550      0.13050       0.0000     
+
+ NODE        87  KCS=      0  X,Y,Z= 0.10550      0.15050       0.0000     
+
+ NODE        88  KCS=      0  X,Y,Z= 0.10550      0.17050       0.0000     
+
+ NODE        89  KCS=      0  X,Y,Z= 0.10550      0.19050       0.0000     
+
+ NODE        90  KCS=      0  X,Y,Z= 0.10550      0.21050       0.0000     
+
+ NODE        91  KCS=      0  X,Y,Z= 0.10550      0.23050       0.0000     
+
+ NODE        92  KCS=      0  X,Y,Z= 0.12550     -0.95000E-002  0.0000     
+
+ NODE        93  KCS=      0  X,Y,Z= 0.12550      0.10500E-001  0.0000     
+
+ NODE        94  KCS=      0  X,Y,Z= 0.12550      0.30500E-001  0.0000     
+
+ NODE        95  KCS=      0  X,Y,Z= 0.12550      0.50500E-001  0.0000     
+
+ NODE        96  KCS=      0  X,Y,Z= 0.12550      0.70500E-001  0.0000     
+
+ NODE        97  KCS=      0  X,Y,Z= 0.12550      0.90500E-001  0.0000     
+
+ NODE        98  KCS=      0  X,Y,Z= 0.12550      0.11050       0.0000     
+
+ NODE        99  KCS=      0  X,Y,Z= 0.12550      0.13050       0.0000     
+
+ NODE       100  KCS=      0  X,Y,Z= 0.12550      0.15050       0.0000     
+
+ NODE       101  KCS=      0  X,Y,Z= 0.12550      0.17050       0.0000     
+
+ NODE       102  KCS=      0  X,Y,Z= 0.12550      0.19050       0.0000     
+
+ NODE       103  KCS=      0  X,Y,Z= 0.12550      0.21050       0.0000     
+
+ NODE       104  KCS=      0  X,Y,Z= 0.12550      0.23050       0.0000     
+
+ NODE       105  KCS=      0  X,Y,Z= 0.14550     -0.95000E-002  0.0000     
+
+ NODE       106  KCS=      0  X,Y,Z= 0.14550      0.10500E-001  0.0000     
+
+ NODE       107  KCS=      0  X,Y,Z= 0.14550      0.30500E-001  0.0000     
+
+ NODE       108  KCS=      0  X,Y,Z= 0.14550      0.50500E-001  0.0000     
+
+ NODE       109  KCS=      0  X,Y,Z= 0.14550      0.70500E-001  0.0000     
+
+ NODE       110  KCS=      0  X,Y,Z= 0.14550      0.90500E-001  0.0000     
+
+ NODE       111  KCS=      0  X,Y,Z= 0.14550      0.11050       0.0000     
+
+ NODE       112  KCS=      0  X,Y,Z= 0.14550      0.13050       0.0000     
+
+ NODE       113  KCS=      0  X,Y,Z= 0.14550      0.15050       0.0000     
+
+ NODE       114  KCS=      0  X,Y,Z= 0.14550      0.17050       0.0000     
+
+ NODE       115  KCS=      0  X,Y,Z= 0.14550      0.19050       0.0000     
+
+ NODE       116  KCS=      0  X,Y,Z= 0.14550      0.21050       0.0000     
+
+ NODE       117  KCS=      0  X,Y,Z= 0.14550      0.23050       0.0000     
+
+ NODE       118  KCS=      0  X,Y,Z= 0.16550     -0.95000E-002  0.0000     
+
+ NODE       119  KCS=      0  X,Y,Z= 0.16550      0.10500E-001  0.0000     
+
+ NODE       120  KCS=      0  X,Y,Z= 0.16550      0.30500E-001  0.0000     
+
+ NODE       121  KCS=      0  X,Y,Z= 0.16550      0.50500E-001  0.0000     
+
+ NODE       122  KCS=      0  X,Y,Z= 0.16550      0.70500E-001  0.0000     
+
+ NODE       123  KCS=      0  X,Y,Z= 0.16550      0.90500E-001  0.0000     
+
+ NODE       124  KCS=      0  X,Y,Z= 0.16550      0.11050       0.0000     
+
+ NODE       125  KCS=      0  X,Y,Z= 0.16550      0.13050       0.0000     
+
+ NODE       126  KCS=      0  X,Y,Z= 0.16550      0.15050       0.0000     
+
+ NODE       127  KCS=      0  X,Y,Z= 0.16550      0.17050       0.0000     
+
+ NODE       128  KCS=      0  X,Y,Z= 0.16550      0.19050       0.0000     
+
+ NODE       129  KCS=      0  X,Y,Z= 0.16550      0.21050       0.0000     
+
+ NODE       130  KCS=      0  X,Y,Z= 0.16550      0.23050       0.0000     
+
+ NODE       131  KCS=      0  X,Y,Z= 0.18550     -0.95000E-002  0.0000     
+
+ NODE       132  KCS=      0  X,Y,Z= 0.18550      0.10500E-001  0.0000     
+
+ NODE       133  KCS=      0  X,Y,Z= 0.18550      0.30500E-001  0.0000     
+
+ NODE       134  KCS=      0  X,Y,Z= 0.18550      0.50500E-001  0.0000     
+
+ NODE       135  KCS=      0  X,Y,Z= 0.18550      0.70500E-001  0.0000     
+
+ NODE       136  KCS=      0  X,Y,Z= 0.18550      0.90500E-001  0.0000     
+
+ NODE       137  KCS=      0  X,Y,Z= 0.18550      0.11050       0.0000     
+
+ NODE       138  KCS=      0  X,Y,Z= 0.18550      0.13050       0.0000     
+
+ NODE       139  KCS=      0  X,Y,Z= 0.18550      0.15050       0.0000     
+
+ NODE       140  KCS=      0  X,Y,Z= 0.18550      0.17050       0.0000     
+
+ NODE       141  KCS=      0  X,Y,Z= 0.18550      0.19050       0.0000     
+
+ NODE       142  KCS=      0  X,Y,Z= 0.18550      0.21050       0.0000     
+
+ NODE       143  KCS=      0  X,Y,Z= 0.18550      0.23050       0.0000     
+
+ NODE       144  KCS=      0  X,Y,Z= 0.20550     -0.95000E-002  0.0000     
+
+ NODE       145  KCS=      0  X,Y,Z= 0.20550      0.10500E-001  0.0000     
+
+ NODE       146  KCS=      0  X,Y,Z= 0.20550      0.30500E-001  0.0000     
+
+ NODE       147  KCS=      0  X,Y,Z= 0.20550      0.50500E-001  0.0000     
+
+ NODE       148  KCS=      0  X,Y,Z= 0.20550      0.70500E-001  0.0000     
+
+ NODE       149  KCS=      0  X,Y,Z= 0.20550      0.90500E-001  0.0000     
+
+ NODE       150  KCS=      0  X,Y,Z= 0.20550      0.11050       0.0000     
+
+ NODE       151  KCS=      0  X,Y,Z= 0.20550      0.13050       0.0000     
+
+ NODE       152  KCS=      0  X,Y,Z= 0.20550      0.15050       0.0000     
+
+ NODE       153  KCS=      0  X,Y,Z= 0.20550      0.17050       0.0000     
+
+ NODE       154  KCS=      0  X,Y,Z= 0.20550      0.19050       0.0000     
+
+ NODE       155  KCS=      0  X,Y,Z= 0.20550      0.21050       0.0000     
+
+ NODE       156  KCS=      0  X,Y,Z= 0.20550      0.23050       0.0000     
+
+ NODE       157  KCS=      0  X,Y,Z= 0.22550     -0.95000E-002  0.0000     
+
+ NODE       158  KCS=      0  X,Y,Z= 0.22550      0.10500E-001  0.0000     
+
+ NODE       159  KCS=      0  X,Y,Z= 0.22550      0.30500E-001  0.0000     
+
+ NODE       160  KCS=      0  X,Y,Z= 0.22550      0.50500E-001  0.0000     
+
+ NODE       161  KCS=      0  X,Y,Z= 0.22550      0.70500E-001  0.0000     
+
+ NODE       162  KCS=      0  X,Y,Z= 0.22550      0.90500E-001  0.0000     
+
+ NODE       163  KCS=      0  X,Y,Z= 0.22550      0.11050       0.0000     
+
+ NODE       164  KCS=      0  X,Y,Z= 0.22550      0.13050       0.0000     
+
+ NODE       165  KCS=      0  X,Y,Z= 0.22550      0.15050       0.0000     
+
+ NODE       166  KCS=      0  X,Y,Z= 0.22550      0.17050       0.0000     
+
+ NODE       167  KCS=      0  X,Y,Z= 0.22550      0.19050       0.0000     
+
+ NODE       168  KCS=      0  X,Y,Z= 0.22550      0.21050       0.0000     
+
+ NODE       169  KCS=      0  X,Y,Z= 0.22550      0.23050       0.0000     
+
+ NODE       170  KCS=      0  X,Y,Z= 0.24550     -0.95000E-002  0.0000     
+
+ NODE       171  KCS=      0  X,Y,Z= 0.24550      0.10500E-001  0.0000     
+
+ NODE       172  KCS=      0  X,Y,Z= 0.24550      0.30500E-001  0.0000     
+
+ NODE       173  KCS=      0  X,Y,Z= 0.24550      0.50500E-001  0.0000     
+
+ NODE       174  KCS=      0  X,Y,Z= 0.24550      0.70500E-001  0.0000     
+
+ NODE       175  KCS=      0  X,Y,Z= 0.24550      0.90500E-001  0.0000     
+
+ NODE       176  KCS=      0  X,Y,Z= 0.24550      0.11050       0.0000     
+
+ NODE       177  KCS=      0  X,Y,Z= 0.24550      0.13050       0.0000     
+
+ NODE       178  KCS=      0  X,Y,Z= 0.24550      0.15050       0.0000     
+
+ NODE       179  KCS=      0  X,Y,Z= 0.24550      0.17050       0.0000     
+
+ NODE       180  KCS=      0  X,Y,Z= 0.24550      0.19050       0.0000     
+
+ NODE       181  KCS=      0  X,Y,Z= 0.24550      0.21050       0.0000     
+
+ NODE       182  KCS=      0  X,Y,Z= 0.24550      0.23050       0.0000     
+
+ NODE       183  KCS=      0  X,Y,Z= 0.26550     -0.95000E-002  0.0000     
+
+ NODE       184  KCS=      0  X,Y,Z= 0.26550      0.10500E-001  0.0000     
+
+ NODE       185  KCS=      0  X,Y,Z= 0.26550      0.30500E-001  0.0000     
+
+ NODE       186  KCS=      0  X,Y,Z= 0.26550      0.50500E-001  0.0000     
+
+ NODE       187  KCS=      0  X,Y,Z= 0.26550      0.70500E-001  0.0000     
+
+ NODE       188  KCS=      0  X,Y,Z= 0.26550      0.90500E-001  0.0000     
+
+ NODE       189  KCS=      0  X,Y,Z= 0.26550      0.11050       0.0000     
+
+ NODE       190  KCS=      0  X,Y,Z= 0.26550      0.13050       0.0000     
+
+ NODE       191  KCS=      0  X,Y,Z= 0.26550      0.15050       0.0000     
+
+ NODE       192  KCS=      0  X,Y,Z= 0.26550      0.17050       0.0000     
+
+ NODE       193  KCS=      0  X,Y,Z= 0.26550      0.19050       0.0000     
+
+ NODE       194  KCS=      0  X,Y,Z= 0.26550      0.21050       0.0000     
+
+ NODE       195  KCS=      0  X,Y,Z= 0.26550      0.23050       0.0000     
+
+ /INPUT FILE= elements.txt  LINE=       0
+
+ MATERIAL         1     EX   =   17000.00      
+
+ MATERIAL         1     PRXY =  0.3000000      
+
+ CHARACTERS IN INTEGER FIELD    =   7
+ OUTPUT DISPLAY TYPE            =   F 
+ CHARACTERS PER OUTPUT FIELD    =  15
+ CHARACTERS AFTER DECIMAL POINT =  10
+ LINES PER PAGE                 =****
+ CHARACTERS PER LINE            = 132
+
+
+ ***** ROUTINE COMPLETED *****  CP =         0.324
+
+
+
+ *****  ANSYS SOLUTION ROUTINE  *****
+
+ /INPUT FILE= disp.txt  LINE=       0
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES         1 TO        1 BY        1
+ REAL= 5.015845239E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES         1 TO        1 BY        1
+ REAL= 1.258156010E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES         1 TO        1 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES         2 TO        2 BY        1
+ REAL= 4.592038405E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES         2 TO        2 BY        1
+ REAL= 1.008817910E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES         2 TO        2 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES         3 TO        3 BY        1
+ REAL= 4.382198333E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES         3 TO        3 BY        1
+ REAL= 5.603993300E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES         3 TO        3 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES         4 TO        4 BY        1
+ REAL= 4.296856561E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES         4 TO        4 BY        1
+ REAL=-1.127314400E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES         4 TO        4 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES         5 TO        5 BY        1
+ REAL= 4.265904792E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES         5 TO        5 BY        1
+ REAL=-1.019304380E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES         5 TO        5 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES         6 TO        6 BY        1
+ REAL= 4.187620493E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES         6 TO        6 BY        1
+ REAL=-2.023322130E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES         6 TO        6 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES         7 TO        7 BY        1
+ REAL= 3.928656484E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES         7 TO        7 BY        1
+ REAL=-2.849059450E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES         7 TO        7 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES         8 TO        8 BY        1
+ REAL= 3.425143284E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES         8 TO        8 BY        1
+ REAL=-3.283044170E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES         8 TO        8 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES         9 TO        9 BY        1
+ REAL= 2.771128924E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES         9 TO        9 BY        1
+ REAL=-3.361207410E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES         9 TO        9 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        10 TO       10 BY        1
+ REAL= 2.139249210E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        10 TO       10 BY        1
+ REAL=-3.224883790E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        10 TO       10 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        11 TO       11 BY        1
+ REAL= 1.682583590E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        11 TO       11 BY        1
+ REAL=-3.052306490E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        11 TO       11 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        12 TO       12 BY        1
+ REAL= 1.488831047E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        12 TO       12 BY        1
+ REAL=-2.916943840E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        12 TO       12 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        13 TO       13 BY        1
+ REAL= 1.677648249E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        13 TO       13 BY        1
+ REAL=-2.854661930E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        13 TO       13 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        14 TO       14 BY        1
+ REAL= 4.732069131E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        14 TO       14 BY        1
+ REAL= 9.432215400E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        14 TO       14 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        15 TO       15 BY        1
+ REAL= 4.489863210E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        15 TO       15 BY        1
+ REAL= 8.335872900E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        15 TO       15 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        16 TO       16 BY        1
+ REAL= 4.201701809E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        16 TO       16 BY        1
+ REAL= 4.772047800E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        16 TO       16 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        17 TO       17 BY        1
+ REAL= 4.083593547E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        17 TO       17 BY        1
+ REAL=-1.432662100E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        17 TO       17 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        18 TO       18 BY        1
+ REAL= 4.029201658E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        18 TO       18 BY        1
+ REAL=-1.016198370E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        18 TO       18 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        19 TO       19 BY        1
+ REAL= 3.928870792E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        19 TO       19 BY        1
+ REAL=-1.994502350E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        19 TO       19 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        20 TO       20 BY        1
+ REAL= 3.656773283E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        20 TO       20 BY        1
+ REAL=-2.795974130E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        20 TO       20 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        21 TO       21 BY        1
+ REAL= 3.172465858E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        21 TO       21 BY        1
+ REAL=-3.220395670E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        21 TO       21 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        22 TO       22 BY        1
+ REAL= 2.553324286E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        22 TO       22 BY        1
+ REAL=-3.285334430E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        22 TO       22 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        23 TO       23 BY        1
+ REAL= 1.967695405E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        23 TO       23 BY        1
+ REAL=-3.155467280E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        23 TO       23 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        24 TO       24 BY        1
+ REAL= 1.578361022E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        24 TO       24 BY        1
+ REAL=-3.025479800E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        24 TO       24 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        25 TO       25 BY        1
+ REAL= 1.510900547E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        25 TO       25 BY        1
+ REAL=-2.966378750E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        25 TO       25 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        26 TO       26 BY        1
+ REAL= 1.628846188E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        26 TO       26 BY        1
+ REAL=-2.947423740E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        26 TO       26 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        27 TO       27 BY        1
+ REAL= 2.229795311E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        27 TO       27 BY        1
+ REAL= 6.757698200E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        27 TO       27 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        28 TO       28 BY        1
+ REAL= 2.007892673E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        28 TO       28 BY        1
+ REAL= 6.317972500E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        28 TO       28 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        29 TO       29 BY        1
+ REAL= 1.828816672E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        29 TO       29 BY        1
+ REAL= 4.554572900E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        29 TO       29 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        30 TO       30 BY        1
+ REAL= 1.754477020E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        30 TO       30 BY        1
+ REAL= 4.478110000E-07   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        30 TO       30 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        31 TO       31 BY        1
+ REAL= 1.754487437E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        31 TO       31 BY        1
+ REAL=-7.290893000E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        31 TO       31 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        32 TO       32 BY        1
+ REAL= 1.708886692E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        32 TO       32 BY        1
+ REAL=-1.608596830E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        32 TO       32 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        33 TO       33 BY        1
+ REAL= 1.477990187E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        33 TO       33 BY        1
+ REAL=-2.394613750E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        33 TO       33 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        34 TO       34 BY        1
+ REAL= 9.442052430E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        34 TO       34 BY        1
+ REAL=-2.728006020E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        34 TO       34 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        35 TO       35 BY        1
+ REAL= 2.638542500E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        35 TO       35 BY        1
+ REAL=-2.651493400E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        35 TO       35 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        36 TO       36 BY        1
+ REAL=-3.335279450E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        36 TO       36 BY        1
+ REAL=-2.567003060E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        36 TO       36 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        37 TO       37 BY        1
+ REAL=-7.225615270E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        37 TO       37 BY        1
+ REAL=-2.526597450E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        37 TO       37 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        38 TO       38 BY        1
+ REAL=-8.288605830E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        38 TO       38 BY        1
+ REAL=-2.510004480E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        38 TO       38 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        39 TO       39 BY        1
+ REAL=-7.142698770E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        39 TO       39 BY        1
+ REAL=-2.518117270E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        39 TO       39 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        40 TO       40 BY        1
+ REAL=-1.508241274E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        40 TO       40 BY        1
+ REAL= 2.837586700E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        40 TO       40 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        41 TO       41 BY        1
+ REAL=-1.690349489E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        41 TO       41 BY        1
+ REAL= 2.312801700E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        41 TO       41 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        42 TO       42 BY        1
+ REAL=-1.772999953E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        42 TO       42 BY        1
+ REAL= 3.049299900E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        42 TO       42 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        43 TO       43 BY        1
+ REAL=-1.667669199E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        43 TO       43 BY        1
+ REAL= 9.694483000E-06   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        43 TO       43 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        44 TO       44 BY        1
+ REAL=-1.606918002E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        44 TO       44 BY        1
+ REAL=-4.681168800E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        44 TO       44 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        45 TO       45 BY        1
+ REAL=-1.625125315E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        45 TO       45 BY        1
+ REAL=-8.997895800E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        45 TO       45 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        46 TO       46 BY        1
+ REAL=-1.854188106E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        46 TO       46 BY        1
+ REAL=-1.555757600E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        46 TO       46 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        47 TO       47 BY        1
+ REAL=-2.516854120E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        47 TO       47 BY        1
+ REAL=-1.663620350E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        47 TO       47 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        48 TO       48 BY        1
+ REAL=-3.212722362E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        48 TO       48 BY        1
+ REAL=-1.659767120E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        48 TO       48 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        49 TO       49 BY        1
+ REAL=-3.790587897E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        49 TO       49 BY        1
+ REAL=-1.799283190E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        49 TO       49 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        50 TO       50 BY        1
+ REAL=-4.165776077E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        50 TO       50 BY        1
+ REAL=-1.878423900E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        50 TO       50 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        51 TO       51 BY        1
+ REAL=-4.278732651E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        51 TO       51 BY        1
+ REAL=-1.919876240E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        51 TO       51 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        52 TO       52 BY        1
+ REAL=-4.185325797E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        52 TO       52 BY        1
+ REAL=-1.941843520E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        52 TO       52 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        53 TO       53 BY        1
+ REAL=-6.406118507E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        53 TO       53 BY        1
+ REAL=-1.435344800E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        53 TO       53 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        54 TO       54 BY        1
+ REAL=-6.547038827E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        54 TO       54 BY        1
+ REAL=-1.505922200E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        54 TO       54 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        55 TO       55 BY        1
+ REAL=-6.594547253E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        55 TO       55 BY        1
+ REAL=-3.863079000E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        55 TO       55 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        56 TO       56 BY        1
+ REAL=-6.529219471E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        56 TO       56 BY        1
+ REAL=-3.946280500E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        56 TO       56 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        57 TO       57 BY        1
+ REAL=-6.458118367E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        57 TO       57 BY        1
+ REAL=-2.051923500E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        57 TO       57 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        58 TO       58 BY        1
+ REAL=-6.503579163E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        58 TO       58 BY        1
+ REAL=-2.103494200E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        58 TO       58 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        59 TO       59 BY        1
+ REAL=-6.768140517E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        59 TO       59 BY        1
+ REAL= 1.219084400E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        59 TO       59 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        60 TO       60 BY        1
+ REAL=-7.236496696E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        60 TO       60 BY        1
+ REAL=-5.275897000E-06   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        60 TO       60 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        61 TO       61 BY        1
+ REAL=-7.803497023E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        61 TO       61 BY        1
+ REAL=-7.226197400E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        61 TO       61 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        62 TO       62 BY        1
+ REAL=-8.293626756E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        62 TO       62 BY        1
+ REAL=-1.036263000E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        62 TO       62 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        63 TO       63 BY        1
+ REAL=-8.616507390E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        63 TO       63 BY        1
+ REAL=-1.227068510E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        63 TO       63 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        64 TO       64 BY        1
+ REAL=-8.720822653E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        64 TO       64 BY        1
+ REAL=-1.317622990E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        64 TO       64 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        65 TO       65 BY        1
+ REAL=-8.647331017E-03   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        65 TO       65 BY        1
+ REAL=-1.348091770E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        65 TO       65 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        66 TO       66 BY        1
+ REAL=-1.228440328E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        66 TO       66 BY        1
+ REAL=-4.302533300E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        66 TO       66 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        67 TO       67 BY        1
+ REAL=-1.238493485E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        67 TO       67 BY        1
+ REAL=-3.893822500E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        67 TO       67 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        68 TO       68 BY        1
+ REAL=-1.242841792E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        68 TO       68 BY        1
+ REAL=-3.531535800E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        68 TO       68 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        69 TO       69 BY        1
+ REAL=-1.239304244E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        69 TO       69 BY        1
+ REAL=-2.289985500E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        69 TO       69 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        70 TO       70 BY        1
+ REAL=-1.236251730E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        70 TO       70 BY        1
+ REAL=-1.212886000E-06   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        70 TO       70 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        71 TO       71 BY        1
+ REAL=-1.241892126E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        71 TO       71 BY        1
+ REAL= 2.480033600E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        71 TO       71 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        72 TO       72 BY        1
+ REAL=-1.260953198E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        72 TO       72 BY        1
+ REAL= 4.118134300E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        72 TO       72 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        73 TO       73 BY        1
+ REAL=-1.292802436E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        73 TO       73 BY        1
+ REAL= 2.519104200E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        73 TO       73 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        74 TO       74 BY        1
+ REAL=-1.330566755E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        74 TO       74 BY        1
+ REAL=-1.175072500E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        74 TO       74 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        75 TO       75 BY        1
+ REAL=-1.365270083E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        75 TO       75 BY        1
+ REAL=-4.807829500E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        75 TO       75 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        76 TO       76 BY        1
+ REAL=-1.389037837E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        76 TO       76 BY        1
+ REAL=-6.994153200E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        76 TO       76 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        77 TO       77 BY        1
+ REAL=-1.397188440E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        77 TO       77 BY        1
+ REAL=-8.128197200E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        77 TO       77 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        78 TO       78 BY        1
+ REAL=-1.392194767E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        78 TO       78 BY        1
+ REAL=-8.334658400E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        78 TO       78 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        79 TO       79 BY        1
+ REAL=-1.887283936E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        79 TO       79 BY        1
+ REAL=-4.514045700E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        79 TO       79 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        80 TO       80 BY        1
+ REAL=-1.892606923E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        80 TO       80 BY        1
+ REAL=-3.606076300E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        80 TO       80 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        81 TO       81 BY        1
+ REAL=-1.895190968E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        81 TO       81 BY        1
+ REAL=-1.621181200E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        81 TO       81 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        82 TO       82 BY        1
+ REAL=-1.893677894E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        82 TO       82 BY        1
+ REAL= 5.282422000E-06   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        82 TO       82 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        83 TO       83 BY        1
+ REAL=-1.892576355E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        83 TO       83 BY        1
+ REAL= 1.940551200E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        83 TO       83 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        84 TO       84 BY        1
+ REAL=-1.896050439E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        84 TO       84 BY        1
+ REAL= 2.983336300E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        84 TO       84 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        85 TO       85 BY        1
+ REAL=-1.906382693E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        85 TO       85 BY        1
+ REAL= 2.633796300E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        85 TO       85 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        86 TO       86 BY        1
+ REAL=-1.923008367E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        86 TO       86 BY        1
+ REAL= 1.443313600E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        86 TO       86 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        87 TO       87 BY        1
+ REAL=-1.942954533E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        87 TO       87 BY        1
+ REAL= 1.374030000E-06   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        87 TO       87 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        88 TO       88 BY        1
+ REAL=-1.961663957E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        88 TO       88 BY        1
+ REAL=-1.862126800E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        88 TO       88 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        89 TO       89 BY        1
+ REAL=-1.974990392E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        89 TO       89 BY        1
+ REAL=-3.697467900E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        89 TO       89 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        90 TO       90 BY        1
+ REAL=-1.979811657E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        90 TO       90 BY        1
+ REAL=-4.807433400E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        90 TO       90 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        91 TO       91 BY        1
+ REAL=-1.977230170E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        91 TO       91 BY        1
+ REAL=-5.052177800E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        91 TO       91 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        92 TO       92 BY        1
+ REAL=-2.584376427E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        92 TO       92 BY        1
+ REAL=-3.800116900E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        92 TO       92 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        93 TO       93 BY        1
+ REAL=-2.584543442E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        93 TO       93 BY        1
+ REAL=-3.011629400E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        93 TO       93 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        94 TO       94 BY        1
+ REAL=-2.584057553E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        94 TO       94 BY        1
+ REAL=-5.410872000E-06   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        94 TO       94 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        95 TO       95 BY        1
+ REAL=-2.582924530E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        95 TO       95 BY        1
+ REAL= 1.961810500E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        95 TO       95 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        96 TO       96 BY        1
+ REAL=-2.581929773E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        96 TO       96 BY        1
+ REAL= 2.898269400E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        96 TO       96 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        97 TO       97 BY        1
+ REAL=-2.581664220E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        97 TO       97 BY        1
+ REAL= 2.809479400E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        97 TO       97 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        98 TO       98 BY        1
+ REAL=-2.582605882E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        98 TO       98 BY        1
+ REAL= 1.595971400E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        98 TO       98 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES        99 TO       99 BY        1
+ REAL=-2.584627234E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES        99 TO       99 BY        1
+ REAL= 5.826394000E-06   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES        99 TO       99 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       100 TO      100 BY        1
+ REAL=-2.587331967E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       100 TO      100 BY        1
+ REAL= 1.322289000E-06   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       100 TO      100 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       101 TO      101 BY        1
+ REAL=-2.590017115E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       101 TO      101 BY        1
+ REAL=-9.928600000E-06   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       101 TO      101 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       102 TO      102 BY        1
+ REAL=-2.592215469E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       102 TO      102 BY        1
+ REAL=-2.441812200E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       102 TO      102 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       103 TO      103 BY        1
+ REAL=-2.593410198E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       103 TO      103 BY        1
+ REAL=-3.452036500E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       103 TO      103 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       104 TO      104 BY        1
+ REAL=-2.593322271E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       104 TO      104 BY        1
+ REAL=-3.705101700E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       104 TO      104 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       105 TO      105 BY        1
+ REAL=-3.285367346E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       105 TO      105 BY        1
+ REAL=-4.147834700E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       105 TO      105 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       106 TO      106 BY        1
+ REAL=-3.280277589E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       106 TO      106 BY        1
+ REAL=-3.209563700E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       106 TO      106 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       107 TO      107 BY        1
+ REAL=-3.276390834E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       107 TO      107 BY        1
+ REAL=-8.609213000E-06   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       107 TO      107 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       108 TO      108 BY        1
+ REAL=-3.275331994E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       108 TO      108 BY        1
+ REAL= 1.590860100E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       108 TO      108 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       109 TO      109 BY        1
+ REAL=-3.274168240E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       109 TO      109 BY        1
+ REAL= 2.737312100E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       109 TO      109 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       110 TO      110 BY        1
+ REAL=-3.269984068E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       110 TO      110 BY        1
+ REAL= 3.046485200E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       110 TO      110 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       111 TO      111 BY        1
+ REAL=-3.261430979E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       111 TO      111 BY        1
+ REAL= 2.087502000E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       111 TO      111 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       112 TO      112 BY        1
+ REAL=-3.248810216E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       112 TO      112 BY        1
+ REAL= 9.498026000E-06   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       112 TO      112 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       113 TO      113 BY        1
+ REAL=-3.234343023E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       113 TO      113 BY        1
+ REAL= 1.222737000E-06   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       113 TO      113 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       114 TO      114 BY        1
+ REAL=-3.221014826E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       114 TO      114 BY        1
+ REAL=-1.381974400E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       114 TO      114 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       115 TO      115 BY        1
+ REAL=-3.211940565E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       115 TO      115 BY        1
+ REAL=-3.033344300E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       115 TO      115 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       116 TO      116 BY        1
+ REAL=-3.209319173E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       116 TO      116 BY        1
+ REAL=-4.132600300E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       116 TO      116 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       117 TO      117 BY        1
+ REAL=-3.211747366E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       117 TO      117 BY        1
+ REAL=-4.449857900E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       117 TO      117 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       118 TO      118 BY        1
+ REAL=-3.955427160E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       118 TO      118 BY        1
+ REAL=-4.372874900E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       118 TO      118 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       119 TO      119 BY        1
+ REAL=-3.945430923E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       119 TO      119 BY        1
+ REAL=-3.665267500E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       119 TO      119 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       120 TO      120 BY        1
+ REAL=-3.939330644E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       120 TO      120 BY        1
+ REAL=-2.289909700E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       120 TO      120 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       121 TO      121 BY        1
+ REAL=-3.939791856E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       121 TO      121 BY        1
+ REAL=-4.300298000E-06   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       121 TO      121 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       122 TO      122 BY        1
+ REAL=-3.939881806E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       122 TO      122 BY        1
+ REAL= 1.348506700E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       122 TO      122 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       123 TO      123 BY        1
+ REAL=-3.932887010E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       123 TO      123 BY        1
+ REAL= 3.185072900E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       123 TO      123 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       124 TO      124 BY        1
+ REAL=-3.915150741E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       124 TO      124 BY        1
+ REAL= 3.653063300E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       124 TO      124 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       125 TO      125 BY        1
+ REAL=-3.887351491E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       125 TO      125 BY        1
+ REAL= 2.166844400E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       125 TO      125 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       126 TO      126 BY        1
+ REAL=-3.855047256E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       126 TO      126 BY        1
+ REAL=-3.611636000E-06   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       126 TO      126 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       127 TO      127 BY        1
+ REAL=-3.825407053E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       127 TO      127 BY        1
+ REAL=-3.343015300E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       127 TO      127 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       128 TO      128 BY        1
+ REAL=-3.805169699E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       128 TO      128 BY        1
+ REAL=-5.492034300E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       128 TO      128 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       129 TO      129 BY        1
+ REAL=-3.798673682E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       129 TO      129 BY        1
+ REAL=-6.680735100E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       129 TO      129 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       130 TO      130 BY        1
+ REAL=-3.803472429E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       130 TO      130 BY        1
+ REAL=-7.009708000E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       130 TO      130 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       131 TO      131 BY        1
+ REAL=-4.561351247E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       131 TO      131 BY        1
+ REAL=-2.283717800E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       131 TO      131 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       132 TO      132 BY        1
+ REAL=-4.547059634E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       132 TO      132 BY        1
+ REAL=-2.351542000E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       132 TO      132 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       133 TO      133 BY        1
+ REAL=-4.540282105E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       133 TO      133 BY        1
+ REAL=-3.467066000E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       133 TO      133 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       134 TO      134 BY        1
+ REAL=-4.543884648E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       134 TO      134 BY        1
+ REAL=-2.848783500E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       134 TO      134 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       135 TO      135 BY        1
+ REAL=-4.547668021E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       135 TO      135 BY        1
+ REAL=-7.179817000E-06   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       135 TO      135 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       136 TO      136 BY        1
+ REAL=-4.540350515E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       136 TO      136 BY        1
+ REAL= 8.249720000E-06   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       136 TO      136 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       137 TO      137 BY        1
+ REAL=-4.514494621E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       137 TO      137 BY        1
+ REAL= 3.564245600E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       137 TO      137 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       138 TO      138 BY        1
+ REAL=-4.471225109E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       138 TO      138 BY        1
+ REAL= 1.673602400E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       138 TO      138 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       139 TO      139 BY        1
+ REAL=-4.420013639E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       139 TO      139 BY        1
+ REAL=-3.907937800E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       139 TO      139 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       140 TO      140 BY        1
+ REAL=-4.374437253E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       140 TO      140 BY        1
+ REAL=-7.729563300E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       140 TO      140 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       141 TO      141 BY        1
+ REAL=-4.343808307E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       141 TO      141 BY        1
+ REAL=-9.875277300E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       141 TO      141 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       142 TO      142 BY        1
+ REAL=-4.333794365E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       142 TO      142 BY        1
+ REAL=-1.092985980E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       142 TO      142 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       143 TO      143 BY        1
+ REAL=-4.340792790E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       143 TO      143 BY        1
+ REAL=-1.133220950E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       143 TO      143 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       144 TO      144 BY        1
+ REAL=-5.073803437E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       144 TO      144 BY        1
+ REAL= 2.251095300E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       144 TO      144 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       145 TO      145 BY        1
+ REAL=-5.055651532E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       145 TO      145 BY        1
+ REAL= 1.786918400E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       145 TO      145 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       146 TO      146 BY        1
+ REAL=-5.046947911E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       146 TO      146 BY        1
+ REAL= 1.026069000E-06   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       146 TO      146 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       147 TO      147 BY        1
+ REAL=-5.054875315E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       147 TO      147 BY        1
+ REAL=-1.036490900E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       147 TO      147 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       148 TO      148 BY        1
+ REAL=-5.060855244E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       148 TO      148 BY        1
+ REAL=-2.818870700E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       148 TO      148 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       149 TO      149 BY        1
+ REAL=-5.056399388E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       149 TO      149 BY        1
+ REAL=-5.551100200E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       149 TO      149 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       150 TO      150 BY        1
+ REAL=-5.028044727E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       150 TO      150 BY        1
+ REAL=-6.446829900E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       150 TO      150 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       151 TO      151 BY        1
+ REAL=-4.968140880E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       151 TO      151 BY        1
+ REAL=-7.796052800E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       151 TO      151 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       152 TO      152 BY        1
+ REAL=-4.900037306E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       152 TO      152 BY        1
+ REAL=-1.237050660E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       152 TO      152 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       153 TO      153 BY        1
+ REAL=-4.841455649E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       153 TO      153 BY        1
+ REAL=-1.446334180E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       153 TO      153 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       154 TO      154 BY        1
+ REAL=-4.802609574E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       154 TO      154 BY        1
+ REAL=-1.570342990E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       154 TO      154 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       155 TO      155 BY        1
+ REAL=-4.790083165E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       155 TO      155 BY        1
+ REAL=-1.629636680E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       155 TO      155 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       156 TO      156 BY        1
+ REAL=-4.798891277E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       156 TO      156 BY        1
+ REAL=-1.661802950E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       156 TO      156 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       157 TO      157 BY        1
+ REAL=-5.470820558E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       157 TO      157 BY        1
+ REAL= 8.087034100E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       157 TO      157 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       158 TO      158 BY        1
+ REAL=-5.448590204E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       158 TO      158 BY        1
+ REAL= 7.242089500E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       158 TO      158 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       159 TO      159 BY        1
+ REAL=-5.433179784E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       159 TO      159 BY        1
+ REAL= 6.766558600E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       159 TO      159 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       160 TO      160 BY        1
+ REAL=-5.432462760E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       160 TO      160 BY        1
+ REAL= 2.793756000E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       160 TO      160 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       161 TO      161 BY        1
+ REAL=-5.435040789E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       161 TO      161 BY        1
+ REAL=-5.152024400E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       161 TO      161 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       162 TO      162 BY        1
+ REAL=-5.432427727E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       162 TO      162 BY        1
+ REAL=-1.284298260E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       162 TO      162 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       163 TO      163 BY        1
+ REAL=-5.411116618E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       163 TO      163 BY        1
+ REAL=-2.259326380E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       163 TO      163 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       164 TO      164 BY        1
+ REAL=-5.345842721E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       164 TO      164 BY        1
+ REAL=-2.507882420E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       164 TO      164 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       165 TO      165 BY        1
+ REAL=-5.269893813E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       165 TO      165 BY        1
+ REAL=-2.259392450E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       165 TO      165 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       166 TO      166 BY        1
+ REAL=-5.204175293E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       166 TO      166 BY        1
+ REAL=-2.225299060E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       166 TO      166 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       167 TO      167 BY        1
+ REAL=-5.160446370E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       167 TO      167 BY        1
+ REAL=-2.190891180E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       167 TO      167 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       168 TO      168 BY        1
+ REAL=-5.146735718E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       168 TO      168 BY        1
+ REAL=-2.178677840E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       168 TO      168 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       169 TO      169 BY        1
+ REAL=-5.157611619E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       169 TO      169 BY        1
+ REAL=-2.195902080E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       169 TO      169 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       170 TO      170 BY        1
+ REAL=-5.738962593E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       170 TO      170 BY        1
+ REAL= 1.319428480E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       170 TO      170 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       171 TO      171 BY        1
+ REAL=-5.714667981E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       171 TO      171 BY        1
+ REAL= 1.178408330E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       171 TO      171 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       172 TO      172 BY        1
+ REAL=-5.688855261E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       172 TO      172 BY        1
+ REAL= 8.519384000E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       172 TO      172 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       173 TO      173 BY        1
+ REAL=-5.681389346E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       173 TO      173 BY        1
+ REAL= 2.230910200E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       173 TO      173 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       174 TO      174 BY        1
+ REAL=-5.681275002E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       174 TO      174 BY        1
+ REAL=-7.170926200E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       174 TO      174 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       175 TO      175 BY        1
+ REAL=-5.674787019E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       175 TO      175 BY        1
+ REAL=-1.842163670E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       175 TO      175 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       176 TO      176 BY        1
+ REAL=-5.645634514E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       176 TO      176 BY        1
+ REAL=-2.728038940E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       176 TO      176 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       177 TO      177 BY        1
+ REAL=-5.589927346E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       177 TO      177 BY        1
+ REAL=-3.142996420E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       177 TO      177 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       178 TO      178 BY        1
+ REAL=-5.516325389E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       178 TO      178 BY        1
+ REAL=-3.098447320E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       178 TO      178 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       179 TO      179 BY        1
+ REAL=-5.447467578E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       179 TO      179 BY        1
+ REAL=-2.863979470E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       179 TO      179 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       180 TO      180 BY        1
+ REAL=-5.400760827E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       180 TO      180 BY        1
+ REAL=-2.692847160E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       180 TO      180 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       181 TO      181 BY        1
+ REAL=-5.389395723E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       181 TO      181 BY        1
+ REAL=-2.613856920E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       181 TO      181 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       182 TO      182 BY        1
+ REAL=-5.400428740E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       182 TO      182 BY        1
+ REAL=-2.606559410E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       182 TO      182 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       183 TO      183 BY        1
+ REAL=-5.769649916E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       183 TO      183 BY        1
+ REAL= 1.681376530E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       183 TO      183 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       184 TO      184 BY        1
+ REAL=-5.727084830E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       184 TO      184 BY        1
+ REAL= 1.396644440E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       184 TO      184 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       185 TO      185 BY        1
+ REAL=-5.710931791E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       185 TO      185 BY        1
+ REAL= 1.012869180E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       185 TO      185 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       186 TO      186 BY        1
+ REAL=-5.708895820E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       186 TO      186 BY        1
+ REAL= 2.952135800E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       186 TO      186 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       187 TO      187 BY        1
+ REAL=-5.713097257E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       187 TO      187 BY        1
+ REAL=-7.531273500E-05   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       187 TO      187 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       188 TO      188 BY        1
+ REAL=-5.710336578E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       188 TO      188 BY        1
+ REAL=-1.945615190E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       188 TO      188 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       189 TO      189 BY        1
+ REAL=-5.682274069E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       189 TO      189 BY        1
+ REAL=-2.891139120E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       189 TO      189 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       190 TO      190 BY        1
+ REAL=-5.622043928E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       190 TO      190 BY        1
+ REAL=-3.304545850E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       190 TO      190 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       191 TO      191 BY        1
+ REAL=-5.541575732E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       191 TO      191 BY        1
+ REAL=-3.237406730E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       191 TO      191 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       192 TO      192 BY        1
+ REAL=-5.464508417E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       192 TO      192 BY        1
+ REAL=-2.963675260E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       192 TO      192 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       193 TO      193 BY        1
+ REAL=-5.408441826E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       193 TO      193 BY        1
+ REAL=-2.717575580E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       193 TO      193 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       194 TO      194 BY        1
+ REAL=-5.382662972E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       194 TO      194 BY        1
+ REAL=-2.546262420E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       194 TO      194 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       195 TO      195 BY        1
+ REAL=-5.400502748E-02   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES       195 TO      195 BY        1
+ REAL=-2.484565210E-04   IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES       195 TO      195 BY        1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ USE PRECONDITIONED CONJUGATE GRADIENT SOLVER
+  CONVERGENCE TOLERANCE = 1.00000E-08
+  MAXIMUM ITERATION     = NumNode*DofPerNode*  1.0000    
+
+ *****  ANSYS SOLVE    COMMAND  *****
+
+ *** NOTE ***                            CP =       0.339   TIME= 16:14:26
+ There is no title defined for this analysis.                            
+
+ *** ERROR ***                           CP =       0.339   TIME= 16:14:26
+ There are no elements defined.                                          
+
+ *** ERROR ***                           CP =       0.339   TIME= 16:14:26
+ The model data was checked and there were errors found.                 
+  Please check output or errors file (                                   
+ /shared/multisim2/DVC/ShIRTImagesResults/me1ibe/compression_x/Results/S 
+ Specimen1/VOI0/NodeSpacing20/input.err ) for messages.                  
+
+
+ NUMBER OF WARNING MESSAGES ENCOUNTERED=          0
+ NUMBER OF ERROR   MESSAGES ENCOUNTERED=          2
+
+
+
+ ***** PROBLEM TERMINATED BY INDICATED ERROR(S) OR BY END OF INPUT DATA *****
+
++--------------------- A N S Y S   S T A T I S T I C S ------------------------+
+
+Release: Release 17.2       Build: 17.2       Update: UP20160718   Platform: LINUX x64   
+Date Run: 07/08/2019   Time: 16:14
+Operating System: CentOS Linux release 7.6.1810 (Core)
+
+Processor Model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz
+
+Compiler: Intel(R) FORTRAN Compiler Version 15.0.2  (Build: 20150121)
+          Intel(R) C/C++ Compiler Version 15.0.2  (Build: 20150121)
+          Intel(R) Math Kernel Library Version 11.2.3 Product Build 20150409
+
+Number of machines requested            :    1
+Total number of cores available         :   20
+Number of physical cores available      :   20
+Number of processes requested           :    1
+Number of threads per process requested :    2
+Total number of cores requested         :    2 (Shared Memory Parallel)                    
+
+GPU Acceleration: Not Requested
+
+Job Name: input
+Input File: /shared/multisim2/DVC/ShIRTImagesResults/me1ibe/compression_x/Results/Specimen1/VOI0/NodeSpacing20/input.txt
+Working Directory: /tmp/usecase3030599636641522584dir
+
+Total CPU time for main thread                    :        0.5 seconds
+Total CPU time summed for all threads             :        0.3 seconds
+
+Elapsed time spent pre-processing model (/PREP7)  :        0.0 seconds
+Elapsed time spent solution - preprocessing       :        0.0 seconds
+Elapsed time spent computing solution             :        0.0 seconds
+Elapsed time spent solution - postprocessing      :        0.0 seconds
+Elapsed time spent post-processing model (/POST1) :        0.0 seconds
+ 
+
+Maximum total memory used                         :        2.0 MB
+Maximum total memory allocated                    :     2112.0 MB
+Maximum total memory available                    :        252 GB
+
++------------------ E N D   A N S Y S   S T A T I S T I C S -------------------+
+
+
+ *---------------------------------------------------------------------------*
+ |                                                                           |
+ |                            ANSYS RUN COMPLETED                            |
+ |                                                                           |
+ |---------------------------------------------------------------------------|
+ |                                                                           |
+ | Ansys Release 17.2          Build 17.2         UP20160718     LINUX x64   |
+ |                                                                           |
+ |---------------------------------------------------------------------------|
+ |                                                                           |
+ | Database Requested(-db)  1024 MB    Scratch Memory Requested      1024 MB |
+ | Maximum Database Used       1 MB    Maximum Scratch Memory Used      1 MB |
+ |                                                                           |
+ |---------------------------------------------------------------------------|
+ |                                                                           |
+ |        CP Time      (sec) =          0.344       Time  =  16:14:26        |
+ |        Elapsed Time (sec) =          2.000       Date  =  07/08/2019      |
+ |                                                                           |
+ *---------------------------------------------------------------------------*

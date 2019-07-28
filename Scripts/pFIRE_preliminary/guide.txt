@@ -1,0 +1,7 @@
+module load anaconda
+source activate pyt
+python3 dcmdownscale.py Initialimage.dcm Finalimage.dcm scale_factor
+
+scale_factor>1 downscales the image
+scale_factor<1 upscales the image
+

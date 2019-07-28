@@ -1,0 +1,1663 @@
+                   .................................................   ......................
+                   :####################::########::################:  :####################:
+                   :####################::########::######:"""":#####: :####################:
+                    :######:""""""":####: :######:  :#####:     :#####: :######:""""""":####:
+.....   .........    :#####:       """"""  :####:    :####:     :#####:  :#####:       """"""
+:####...#########:   :#####:               :####:    :####:     :#####:  :#####:
+:#################:  :######:.........     :####:    :####:....:#####:   :######:.........
+::######:""":######: :###############:     :####:    :#############:     :###############:
+ :#####:     :#####: :###############:     :####:    :####:"""":#####:   :###############:
+ :#####:     :#####: :######""""""""""     :####:    :####:     :#####:  :######:"""""""""
+ :#####:     :#####: :#####:               :####:    :####:     :#####:  :#####:
+ :#####:    :######: :#####:               :####:    :####:     :#####:  :#####:       ......
+ :#####:...:#######::#######:             :######:  :#####:     :#####: :######:......:#####:
+ :################::########:            :########::######:     :#####::####################:
+ :##############:  :########:            :########::######:     :#####::####################:
+ :######:"""""""   """"""""""            """"""""""""""""""     """""""""""""""""""""""""""""
+ :#####:
+ :#####:
+:#######:   Development build (commit:)
+:#######:
+:#######:
+"""""""""
+
+Running on 28 processes
+Loaded fixed image of shape 616 x 144 x 172.
+Beginning elastic registration
+Target nodespacing: 10 10 10
+Using 4 generations
+
+Target nodespacing: 10 10 10
+Nodespacing: 80 80 80
+Iteration 1:
+laplavg = 9.18025, tavg = 444.207, mult=48.3872
+ lo: 2.(1.51975e+06) mid: 10.(1.92944e+06) hi: 20.(2.92212e+06)
+Calculated smoothing factor: 2.00
+Maximum displacement: 50.40
+Average displacement: 3.19
+Iteration 2:
+laplavg = 9.18025, tavg = 391.282, mult=42.6222
+Maximum displacement: 54.74
+Average displacement: 3.35
+Iteration 3:
+laplavg = 9.18025, tavg = 391.518, mult=42.6479
+Maximum displacement: 52.18
+Average displacement: 3.20
+Iteration 4:
+laplavg = 9.18025, tavg = 398.641, mult=43.4238
+Maximum displacement: 49.29
+Average displacement: 3.08
+Iteration 5:
+laplavg = 9.18025, tavg = 407.807, mult=44.4222
+Maximum displacement: 46.85
+Average displacement: 3.00
+Iteration 6:
+laplavg = 9.18025, tavg = 415.793, mult=45.2922
+Maximum displacement: 45.06
+Average displacement: 2.96
+Iteration 7:
+laplavg = 9.18025, tavg = 417.595, mult=45.4885
+Maximum displacement: 44.22
+Average displacement: 2.97
+Iteration 8:
+laplavg = 9.18025, tavg = 412.488, mult=44.9321
+Maximum displacement: 44.41
+Average displacement: 3.05
+Iteration 9:
+laplavg = 9.18025, tavg = 409.445, mult=44.6006
+Maximum displacement: 44.53
+Average displacement: 3.11
+Iteration 10:
+laplavg = 9.18025, tavg = 409.96, mult=44.6568
+Maximum displacement: 44.35
+Average displacement: 3.16
+Iteration 11:
+laplavg = 9.18025, tavg = 412.618, mult=44.9463
+Maximum displacement: 43.98
+Average displacement: 3.19
+Iteration 12:
+laplavg = 9.18025, tavg = 415.757, mult=45.2882
+Maximum displacement: 43.59
+Average displacement: 3.23
+Iteration 13:
+laplavg = 9.18025, tavg = 415.568, mult=45.2677
+Maximum displacement: 43.70
+Average displacement: 3.29
+Iteration 14:
+laplavg = 9.18025, tavg = 411.964, mult=44.8751
+Maximum displacement: 44.34
+Average displacement: 3.37
+Iteration 15:
+laplavg = 9.18025, tavg = 409.452, mult=44.6014
+Maximum displacement: 44.90
+Average displacement: 3.45
+Iteration 16:
+laplavg = 9.18025, tavg = 409.658, mult=44.6239
+Maximum displacement: 45.13
+Average displacement: 3.50
+Iteration 17:
+laplavg = 9.18025, tavg = 411.586, mult=44.8339
+Maximum displacement: 45.12
+Average displacement: 3.55
+Iteration 18:
+laplavg = 9.18025, tavg = 413.239, mult=45.014
+Maximum displacement: 45.16
+Average displacement: 3.59
+Iteration 19:
+laplavg = 9.18025, tavg = 412.26, mult=44.9073
+Maximum displacement: 45.59
+Average displacement: 3.66
+Iteration 20:
+laplavg = 9.18025, tavg = 410.147, mult=44.6771
+Maximum displacement: 46.23
+Average displacement: 3.73
+Iteration 21:
+laplavg = 9.18025, tavg = 409.137, mult=44.5671
+Maximum displacement: 46.83
+Average displacement: 3.80
+Iteration 22:
+laplavg = 9.18025, tavg = 409.961, mult=44.6569
+Maximum displacement: 47.20
+Average displacement: 3.85
+Iteration 23:
+laplavg = 9.18025, tavg = 411.969, mult=44.8756
+Maximum displacement: 47.45
+Average displacement: 3.89
+Iteration 24:
+laplavg = 9.18025, tavg = 412.97, mult=44.9846
+Maximum displacement: 47.84
+Average displacement: 3.94
+Iteration 25:
+laplavg = 9.18025, tavg = 411.633, mult=44.839
+Maximum displacement: 48.56
+Average displacement: 4.01
+Iteration 26:
+laplavg = 9.18025, tavg = 409.904, mult=44.6507
+Maximum displacement: 49.34
+Average displacement: 4.08
+Iteration 27:
+laplavg = 9.18025, tavg = 409.158, mult=44.5694
+Maximum displacement: 49.98
+Average displacement: 4.15
+Iteration 28:
+laplavg = 9.18025, tavg = 410.186, mult=44.6814
+Maximum displacement: 50.37
+Average displacement: 4.20
+Iteration 29:
+laplavg = 9.18025, tavg = 412.256, mult=44.9068
+Maximum displacement: 50.66
+Average displacement: 4.24
+Iteration 30:
+laplavg = 9.18025, tavg = 412.196, mult=44.9004
+Maximum displacement: 51.28
+Average displacement: 4.29
+Iteration 31:
+laplavg = 9.18025, tavg = 410.54, mult=44.72
+Maximum displacement: 52.12
+Average displacement: 4.37
+Iteration 32:
+laplavg = 9.18025, tavg = 409.211, mult=44.5752
+Maximum displacement: 52.90
+Average displacement: 4.44
+Iteration 33:
+laplavg = 9.18025, tavg = 408.87, mult=44.538
+Maximum displacement: 53.54
+Average displacement: 4.50
+Iteration 34:
+laplavg = 9.18025, tavg = 410.032, mult=44.6646
+Maximum displacement: 54.16
+Average displacement: 4.55
+Iteration 35:
+laplavg = 9.18025, tavg = 411.355, mult=44.8087
+Maximum displacement: 54.67
+Average displacement: 4.60
+Iteration 36:
+laplavg = 9.18025, tavg = 410.247, mult=44.688
+Maximum displacement: 55.54
+Average displacement: 4.67
+Iteration 37:
+laplavg = 9.18025, tavg = 409.004, mult=44.5526
+Maximum displacement: 56.49
+Average displacement: 4.74
+Iteration 38:
+laplavg = 9.18025, tavg = 408.567, mult=44.505
+Maximum displacement: 57.37
+Average displacement: 4.81
+Iteration 39:
+laplavg = 9.18025, tavg = 409.196, mult=44.5735
+Maximum displacement: 58.11
+Average displacement: 4.86
+Iteration 40:
+laplavg = 9.18025, tavg = 410.54, mult=44.7199
+Maximum displacement: 58.73
+Average displacement: 4.91
+Iteration 41:
+laplavg = 9.18025, tavg = 410.227, mult=44.6859
+Maximum displacement: 59.56
+Average displacement: 4.98
+Iteration 42:
+laplavg = 9.18025, tavg = 408.727, mult=44.5225
+Maximum displacement: 60.42
+Average displacement: 5.06
+Iteration 43:
+laplavg = 9.18025, tavg = 408.297, mult=44.4756
+Maximum displacement: 61.26
+Average displacement: 5.12
+Iteration 44:
+laplavg = 9.18025, tavg = 409.195, mult=44.5735
+Maximum displacement: 61.95
+Average displacement: 5.18
+Iteration 45:
+laplavg = 9.18025, tavg = 410.934, mult=44.7628
+Maximum displacement: 62.53
+Average displacement: 5.22
+Iteration 46:
+laplavg = 9.18025, tavg = 411.004, mult=44.7705
+Maximum displacement: 63.42
+Average displacement: 5.29
+Iteration 47:
+laplavg = 9.18025, tavg = 409.45, mult=44.6012
+Maximum displacement: 64.45
+Average displacement: 5.37
+Iteration 48:
+laplavg = 9.18025, tavg = 408.403, mult=44.4872
+Maximum displacement: 65.31
+Average displacement: 5.45
+Iteration 49:
+laplavg = 9.18025, tavg = 409.177, mult=44.5715
+Maximum displacement: 65.97
+Average displacement: 5.51
+Iteration 50:
+laplavg = 9.18025, tavg = 411.34, mult=44.8071
+Maximum displacement: 66.44
+Average displacement: 5.55
+Iteration 51:
+laplavg = 9.18025, tavg = 412.096, mult=44.8894
+Maximum displacement: 67.21
+Average displacement: 5.61
+Iteration 52:
+laplavg = 9.18025, tavg = 411.198, mult=44.7917
+Maximum displacement: 68.24
+Average displacement: 5.69
+Iteration 53:
+laplavg = 9.18025, tavg = 410.247, mult=44.6881
+Maximum displacement: 69.16
+Average displacement: 5.77
+Iteration 54:
+laplavg = 9.18025, tavg = 410.91, mult=44.7603
+Maximum displacement: 69.87
+Average displacement: 5.83
+Iteration 55:
+laplavg = 9.18025, tavg = 412.649, mult=44.9496
+Maximum displacement: 70.46
+Average displacement: 5.88
+Iteration 56:
+laplavg = 9.18025, tavg = 412.677, mult=44.9528
+Maximum displacement: 71.41
+Average displacement: 5.95
+Iteration 57:
+laplavg = 9.18025, tavg = 411.455, mult=44.8196
+Maximum displacement: 72.53
+Average displacement: 6.04
+Iteration 58:
+laplavg = 9.18025, tavg = 410.321, mult=44.6961
+Maximum displacement: 73.49
+Average displacement: 6.13
+Iteration 59:
+laplavg = 9.18025, tavg = 411.413, mult=44.815
+Maximum displacement: 74.09
+Average displacement: 6.19
+Iteration 60:
+laplavg = 9.18025, tavg = 414.001, mult=45.0969
+Maximum displacement: 74.53
+Average displacement: 6.23
+Iteration 61:
+laplavg = 9.18025, tavg = 414.927, mult=45.1978
+Maximum displacement: 75.39
+Average displacement: 6.29
+Iteration 62:
+laplavg = 9.18025, tavg = 414.038, mult=45.101
+Maximum displacement: 76.57
+Average displacement: 6.38
+Iteration 63:
+laplavg = 9.18025, tavg = 412.526, mult=44.9362
+Maximum displacement: 77.73
+Average displacement: 6.48
+Iteration 64:
+laplavg = 9.18025, tavg = 413.005, mult=44.9885
+Maximum displacement: 78.43
+Average displacement: 6.55
+Iteration 65:
+laplavg = 9.18025, tavg = 415.262, mult=45.2343
+Maximum displacement: 78.90
+Average displacement: 6.60
+Iteration 66:
+laplavg = 9.18025, tavg = 416.458, mult=45.3646
+Maximum displacement: 79.72
+Average displacement: 6.66
+Iteration 67:
+laplavg = 9.18025, tavg = 416.335, mult=45.3511
+Maximum displacement: 80.85
+Average displacement: 6.74
+Iteration 68:
+laplavg = 9.18025, tavg = 415.713, mult=45.2834
+Maximum displacement: 81.95
+Average displacement: 6.84
+Iteration 69:
+laplavg = 9.18025, tavg = 416.689, mult=45.3897
+Maximum displacement: 82.60
+Average displacement: 6.91
+Iteration 70:
+laplavg = 9.18025, tavg = 418.618, mult=45.5999
+Maximum displacement: 83.14
+Average displacement: 6.96
+Iteration 71:
+laplavg = 9.18025, tavg = 420.086, mult=45.7598
+Maximum displacement: 83.94
+Average displacement: 7.03
+Iteration 72:
+laplavg = 9.18025, tavg = 420.542, mult=45.8094
+Maximum displacement: 85.02
+Average displacement: 7.11
+Iteration 73:
+laplavg = 9.18025, tavg = 420.825, mult=45.8403
+Maximum displacement: 86.02
+Average displacement: 7.19
+Iteration 74:
+laplavg = 9.18025, tavg = 421.922, mult=45.9597
+Maximum displacement: 86.70
+Average displacement: 7.26
+Iteration 75:
+laplavg = 9.18025, tavg = 422.965, mult=46.0734
+Maximum displacement: 87.49
+Average displacement: 7.34
+Iteration 76:
+laplavg = 9.18025, tavg = 424.676, mult=46.2597
+Maximum displacement: 88.28
+Average displacement: 7.40
+Iteration 77:
+laplavg = 9.18025, tavg = 426.334, mult=46.4404
+Maximum displacement: 89.13
+Average displacement: 7.47
+Iteration 78:
+laplavg = 9.18025, tavg = 427.866, mult=46.6072
+Maximum displacement: 89.92
+Average displacement: 7.53
+Iteration 79:
+laplavg = 9.18025, tavg = 427.938, mult=46.6151
+Maximum displacement: 90.90
+Average displacement: 7.63
+Iteration 80:
+laplavg = 9.18025, tavg = 427.683, mult=46.5873
+Maximum displacement: 92.06
+Average displacement: 7.73
+Iteration 81:
+laplavg = 9.18025, tavg = 429.273, mult=46.7605
+Maximum displacement: 92.90
+Average displacement: 7.80
+Iteration 82:
+laplavg = 9.18025, tavg = 432.503, mult=47.1123
+Maximum displacement: 93.38
+Average displacement: 7.84
+Iteration 83:
+laplavg = 9.18025, tavg = 434.527, mult=47.3328
+Maximum displacement: 94.04
+Average displacement: 7.90
+Iteration 84:
+laplavg = 9.18025, tavg = 433.971, mult=47.2723
+Maximum displacement: 95.28
+Average displacement: 8.01
+Iteration 85:
+laplavg = 9.18025, tavg = 434.137, mult=47.2904
+Maximum displacement: 96.44
+Average displacement: 8.11
+Iteration 86:
+laplavg = 9.18025, tavg = 437.267, mult=47.6313
+Maximum displacement: 96.95
+Average displacement: 8.15
+Iteration 87:
+laplavg = 9.18025, tavg = 440.525, mult=47.9862
+Maximum displacement: 97.39
+Average displacement: 8.20
+Iteration 88:
+laplavg = 9.18025, tavg = 440.837, mult=48.0201
+Maximum displacement: 98.51
+Average displacement: 8.29
+Iteration 89:
+laplavg = 9.18025, tavg = 440.029, mult=47.9322
+Maximum displacement: 99.93
+Average displacement: 8.41
+Iteration 90:
+laplavg = 9.18025, tavg = 441.78, mult=48.1229
+Maximum displacement: 100.75
+Average displacement: 8.48
+Iteration 91:
+laplavg = 9.18025, tavg = 445.531, mult=48.5315
+Maximum displacement: 101.06
+Average displacement: 8.52
+Iteration 92:
+laplavg = 9.18025, tavg = 447.349, mult=48.7295
+Maximum displacement: 101.86
+Average displacement: 8.59
+Iteration 93:
+laplavg = 9.18025, tavg = 447.384, mult=48.7333
+Maximum displacement: 103.17
+Average displacement: 8.69
+Iteration 94:
+laplavg = 9.18025, tavg = 448.861, mult=48.8942
+Maximum displacement: 104.11
+Average displacement: 8.78
+Iteration 95:
+laplavg = 9.18025, tavg = 452.228, mult=49.261
+Maximum displacement: 104.51
+Average displacement: 8.82
+Iteration 96:
+laplavg = 9.18025, tavg = 455.432, mult=49.61
+Maximum displacement: 105.00
+Average displacement: 8.87
+Iteration 97:
+laplavg = 9.18025, tavg = 456.923, mult=49.7724
+Maximum displacement: 106.01
+Average displacement: 8.95
+Iteration 98:
+laplavg = 9.18025, tavg = 458.452, mult=49.9389
+Maximum displacement: 107.03
+Average displacement: 9.03
+Iteration 99:
+laplavg = 9.18025, tavg = 460.588, mult=50.1716
+Maximum displacement: 107.75
+Average displacement: 9.10
+Iteration 100:
+laplavg = 9.18025, tavg = 463.269, mult=50.4636
+Maximum displacement: 108.36
+Average displacement: 9.16
+Target nodespacing: 10 10 10
+Nodespacing: 80 80 80
+Nodespacing: 40 40 40
+Iteration 1:
+laplavg = 10.9165, tavg = 64.4612, mult=5.90492
+ lo: 2.(30480.7) mid: 10.(32869.9) hi: 20.(31487.9)
+Calculated smoothing factor: 12.15
+Maximum displacement: 124.14
+Average displacement: 4.12
+Iteration 2:
+laplavg = 10.9165, tavg = 98.3752, mult=9.01158
+Maximum displacement: 120.18
+Average displacement: 4.51
+Iteration 3:
+laplavg = 10.9165, tavg = 99.1408, mult=9.08172
+Maximum displacement: 117.73
+Average displacement: 4.57
+Iteration 4:
+laplavg = 10.9165, tavg = 99.8148, mult=9.14346
+Maximum displacement: 117.62
+Average displacement: 4.63
+Iteration 5:
+laplavg = 10.9165, tavg = 101.202, mult=9.27056
+Maximum displacement: 117.73
+Average displacement: 4.66
+Iteration 6:
+laplavg = 10.9165, tavg = 102.452, mult=9.38503
+Maximum displacement: 118.17
+Average displacement: 4.69
+Iteration 7:
+laplavg = 10.9165, tavg = 103.194, mult=9.45299
+Maximum displacement: 119.25
+Average displacement: 4.75
+Iteration 8:
+laplavg = 10.9165, tavg = 104.575, mult=9.57955
+Maximum displacement: 119.66
+Average displacement: 4.78
+Iteration 9:
+laplavg = 10.9165, tavg = 106.109, mult=9.72003
+Maximum displacement: 120.01
+Average displacement: 4.80
+Iteration 10:
+laplavg = 10.9165, tavg = 107.003, mult=9.80192
+Maximum displacement: 121.14
+Average displacement: 4.85
+Iteration 11:
+laplavg = 10.9165, tavg = 108.223, mult=9.91368
+Maximum displacement: 121.93
+Average displacement: 4.89
+Iteration 12:
+laplavg = 10.9165, tavg = 109.818, mult=10.0598
+Maximum displacement: 122.44
+Average displacement: 4.91
+Iteration 13:
+laplavg = 10.9165, tavg = 111.146, mult=10.1815
+Maximum displacement: 123.17
+Average displacement: 4.94
+Iteration 14:
+laplavg = 10.9165, tavg = 112.373, mult=10.2939
+Maximum displacement: 124.04
+Average displacement: 4.98
+Iteration 15:
+laplavg = 10.9165, tavg = 113.796, mult=10.4242
+Maximum displacement: 124.76
+Average displacement: 5.01
+Iteration 16:
+laplavg = 10.9165, tavg = 115.255, mult=10.5578
+Maximum displacement: 125.41
+Average displacement: 5.04
+Iteration 17:
+laplavg = 10.9165, tavg = 116.93, mult=10.7112
+Maximum displacement: 125.81
+Average displacement: 5.06
+Iteration 18:
+laplavg = 10.9165, tavg = 118.545, mult=10.8592
+Maximum displacement: 126.33
+Average displacement: 5.08
+Iteration 19:
+laplavg = 10.9165, tavg = 119.958, mult=10.9886
+Maximum displacement: 127.03
+Average displacement: 5.11
+Iteration 20:
+laplavg = 10.9165, tavg = 121.588, mult=11.138
+Maximum displacement: 127.47
+Average displacement: 5.13
+Iteration 21:
+laplavg = 10.9165, tavg = 123.49, mult=11.3122
+Maximum displacement: 127.72
+Average displacement: 5.14
+Iteration 22:
+laplavg = 10.9165, tavg = 125.292, mult=11.4773
+Maximum displacement: 128.03
+Average displacement: 5.15
+Iteration 23:
+laplavg = 10.9165, tavg = 126.792, mult=11.6147
+Maximum displacement: 128.58
+Average displacement: 5.18
+Iteration 24:
+laplavg = 10.9165, tavg = 128.418, mult=11.7636
+Maximum displacement: 129.06
+Average displacement: 5.20
+Iteration 25:
+laplavg = 10.9165, tavg = 130.843, mult=11.9858
+Maximum displacement: 128.85
+Average displacement: 5.19
+Iteration 26:
+laplavg = 10.9165, tavg = 132.858, mult=12.1704
+Maximum displacement: 128.91
+Average displacement: 5.20
+Iteration 27:
+laplavg = 10.9165, tavg = 133.957, mult=12.271
+Maximum displacement: 129.85
+Average displacement: 5.24
+Iteration 28:
+laplavg = 10.9165, tavg = 136.05, mult=12.4627
+Maximum displacement: 129.94
+Average displacement: 5.24
+Iteration 29:
+laplavg = 10.9165, tavg = 138.703, mult=12.7058
+Maximum displacement: 129.51
+Average displacement: 5.23
+Iteration 30:
+laplavg = 10.9165, tavg = 140.309, mult=12.8529
+Maximum displacement: 129.89
+Average displacement: 5.25
+Iteration 31:
+laplavg = 10.9165, tavg = 141.766, mult=12.9864
+Maximum displacement: 130.52
+Average displacement: 5.27
+Iteration 32:
+laplavg = 10.9165, tavg = 144.208, mult=13.2101
+Maximum displacement: 130.35
+Average displacement: 5.27
+Iteration 33:
+laplavg = 10.9165, tavg = 146.182, mult=13.3909
+Maximum displacement: 130.46
+Average displacement: 5.27
+Iteration 34:
+laplavg = 10.9165, tavg = 147.987, mult=13.5562
+Maximum displacement: 130.78
+Average displacement: 5.29
+Iteration 35:
+laplavg = 10.9165, tavg = 150.103, mult=13.7501
+Maximum displacement: 130.90
+Average displacement: 5.29
+Iteration 36:
+laplavg = 10.9165, tavg = 152.378, mult=13.9585
+Maximum displacement: 130.87
+Average displacement: 5.29
+Iteration 37:
+laplavg = 10.9165, tavg = 153.934, mult=14.101
+Maximum displacement: 131.40
+Average displacement: 5.31
+Iteration 38:
+laplavg = 10.9165, tavg = 155.742, mult=14.2667
+Maximum displacement: 131.78
+Average displacement: 5.33
+Iteration 39:
+laplavg = 10.9165, tavg = 158.548, mult=14.5237
+Maximum displacement: 131.41
+Average displacement: 5.31
+Iteration 40:
+laplavg = 10.9165, tavg = 160.875, mult=14.7368
+Maximum displacement: 131.35
+Average displacement: 5.31
+Iteration 41:
+laplavg = 10.9165, tavg = 162.301, mult=14.8675
+Maximum displacement: 131.93
+Average displacement: 5.33
+Iteration 42:
+laplavg = 10.9165, tavg = 164.46, mult=15.0652
+Maximum displacement: 132.02
+Average displacement: 5.33
+Iteration 43:
+laplavg = 10.9165, tavg = 166.924, mult=15.291
+Maximum displacement: 131.92
+Average displacement: 5.33
+Iteration 44:
+laplavg = 10.9165, tavg = 168.954, mult=15.4769
+Maximum displacement: 132.05
+Average displacement: 5.33
+Iteration 45:
+laplavg = 10.9165, tavg = 170.941, mult=15.659
+Maximum displacement: 132.22
+Average displacement: 5.34
+Iteration 46:
+laplavg = 10.9165, tavg = 173.195, mult=15.8654
+Maximum displacement: 132.26
+Average displacement: 5.34
+Iteration 47:
+laplavg = 10.9165, tavg = 175.39, mult=16.0665
+Maximum displacement: 132.25
+Average displacement: 5.34
+Iteration 48:
+laplavg = 10.9165, tavg = 177.618, mult=16.2705
+Maximum displacement: 132.28
+Average displacement: 5.34
+Iteration 49:
+laplavg = 10.9165, tavg = 180.149, mult=16.5024
+Maximum displacement: 132.11
+Average displacement: 5.33
+Iteration 50:
+laplavg = 10.9165, tavg = 181.782, mult=16.652
+Maximum displacement: 132.42
+Average displacement: 5.35
+Iteration 51:
+laplavg = 10.9165, tavg = 183.791, mult=16.836
+Maximum displacement: 132.59
+Average displacement: 5.35
+Iteration 52:
+laplavg = 10.9165, tavg = 187.141, mult=17.1429
+Maximum displacement: 131.90
+Average displacement: 5.32
+Iteration 53:
+laplavg = 10.9165, tavg = 189.777, mult=17.3844
+Maximum displacement: 131.64
+Average displacement: 5.31
+Iteration 54:
+laplavg = 10.9165, tavg = 191.644, mult=17.5554
+Maximum displacement: 131.81
+Average displacement: 5.32
+Iteration 55:
+laplavg = 10.9165, tavg = 193.041, mult=17.6833
+Maximum displacement: 132.28
+Average displacement: 5.34
+Iteration 56:
+laplavg = 10.9165, tavg = 195.747, mult=17.9312
+Maximum displacement: 132.04
+Average displacement: 5.33
+Iteration 57:
+laplavg = 10.9165, tavg = 198.891, mult=18.2192
+Maximum displacement: 131.43
+Average displacement: 5.31
+Iteration 58:
+laplavg = 10.9165, tavg = 201.208, mult=18.4315
+Maximum displacement: 131.34
+Average displacement: 5.30
+Iteration 59:
+laplavg = 10.9165, tavg = 202.563, mult=18.5556
+Maximum displacement: 131.76
+Average displacement: 5.32
+Iteration 60:
+laplavg = 10.9165, tavg = 204.306, mult=18.7153
+Maximum displacement: 132.05
+Average displacement: 5.33
+Iteration 61:
+laplavg = 10.9165, tavg = 206.332, mult=18.9009
+Maximum displacement: 132.13
+Average displacement: 5.34
+Iteration 62:
+laplavg = 10.9165, tavg = 208.652, mult=19.1134
+Maximum displacement: 132.09
+Average displacement: 5.33
+Iteration 63:
+laplavg = 10.9165, tavg = 211.425, mult=19.3674
+Maximum displacement: 131.74
+Average displacement: 5.32
+Iteration 64:
+laplavg = 10.9165, tavg = 213.806, mult=19.5856
+Maximum displacement: 131.59
+Average displacement: 5.31
+Iteration 65:
+laplavg = 10.9165, tavg = 215.407, mult=19.7322
+Maximum displacement: 131.89
+Average displacement: 5.32
+Iteration 66:
+laplavg = 10.9165, tavg = 215.684, mult=19.7576
+Maximum displacement: 132.94
+Average displacement: 5.37
+Iteration 67:
+laplavg = 10.9165, tavg = 218.039, mult=19.9733
+Maximum displacement: 132.90
+Average displacement: 5.37
+Iteration 68:
+laplavg = 10.9165, tavg = 220.868, mult=20.2325
+Maximum displacement: 132.50
+Average displacement: 5.35
+Iteration 69:
+laplavg = 10.9165, tavg = 224.379, mult=20.554
+Maximum displacement: 131.81
+Average displacement: 5.32
+Iteration 70:
+laplavg = 10.9165, tavg = 226.357, mult=20.7352
+Maximum displacement: 131.79
+Average displacement: 5.32
+Iteration 71:
+laplavg = 10.9165, tavg = 227.372, mult=20.8283
+Maximum displacement: 132.44
+Average displacement: 5.35
+Iteration 72:
+laplavg = 10.9165, tavg = 228.958, mult=20.9735
+Maximum displacement: 132.71
+Average displacement: 5.36
+Iteration 73:
+laplavg = 10.9165, tavg = 230.848, mult=21.1466
+Maximum displacement: 132.90
+Average displacement: 5.37
+Iteration 74:
+laplavg = 10.9165, tavg = 232.824, mult=21.3276
+Maximum displacement: 132.96
+Average displacement: 5.37
+Iteration 75:
+laplavg = 10.9165, tavg = 235.265, mult=21.5513
+Maximum displacement: 132.82
+Average displacement: 5.37
+Iteration 76:
+laplavg = 10.9165, tavg = 237.327, mult=21.7401
+Maximum displacement: 132.79
+Average displacement: 5.37
+Iteration 77:
+laplavg = 10.9165, tavg = 238.908, mult=21.885
+Maximum displacement: 133.10
+Average displacement: 5.38
+Iteration 78:
+laplavg = 10.9165, tavg = 240.928, mult=22.07
+Maximum displacement: 133.11
+Average displacement: 5.38
+Iteration 79:
+laplavg = 10.9165, tavg = 242.793, mult=22.2408
+Maximum displacement: 133.26
+Average displacement: 5.38
+Iteration 80:
+laplavg = 10.9165, tavg = 243.634, mult=22.3179
+Maximum displacement: 133.93
+Average displacement: 5.41
+Iteration 81:
+laplavg = 10.9165, tavg = 244.993, mult=22.4424
+Maximum displacement: 134.34
+Average displacement: 5.43
+Iteration 82:
+laplavg = 10.9165, tavg = 246.065, mult=22.5406
+Maximum displacement: 134.92
+Average displacement: 5.45
+Iteration 83:
+laplavg = 10.9165, tavg = 248.768, mult=22.7882
+Maximum displacement: 134.66
+Average displacement: 5.44
+Iteration 84:
+laplavg = 10.9165, tavg = 250.96, mult=22.989
+Maximum displacement: 134.67
+Average displacement: 5.44
+Iteration 85:
+laplavg = 10.9165, tavg = 253.597, mult=23.2305
+Maximum displacement: 134.43
+Average displacement: 5.43
+Iteration 86:
+laplavg = 10.9165, tavg = 255.056, mult=23.3642
+Maximum displacement: 134.79
+Average displacement: 5.44
+Iteration 87:
+laplavg = 10.9165, tavg = 256.856, mult=23.5291
+Maximum displacement: 134.93
+Average displacement: 5.45
+Iteration 88:
+laplavg = 10.9165, tavg = 257.346, mult=23.574
+Maximum displacement: 135.79
+Average displacement: 5.48
+Iteration 89:
+laplavg = 10.9165, tavg = 259.141, mult=23.7384
+Maximum displacement: 135.96
+Average displacement: 5.49
+Iteration 90:
+laplavg = 10.9165, tavg = 261.058, mult=23.914
+Maximum displacement: 136.14
+Average displacement: 5.50
+Iteration 91:
+laplavg = 10.9165, tavg = 263.218, mult=24.1119
+Maximum displacement: 136.13
+Average displacement: 5.50
+Iteration 92:
+laplavg = 10.9165, tavg = 265.334, mult=24.3058
+Maximum displacement: 136.18
+Average displacement: 5.50
+Iteration 93:
+laplavg = 10.9165, tavg = 266.928, mult=24.4517
+Maximum displacement: 136.39
+Average displacement: 5.51
+Iteration 94:
+laplavg = 10.9165, tavg = 269.327, mult=24.6715
+Maximum displacement: 136.27
+Average displacement: 5.51
+Iteration 95:
+laplavg = 10.9165, tavg = 270.188, mult=24.7504
+Maximum displacement: 136.86
+Average displacement: 5.53
+Iteration 96:
+laplavg = 10.9165, tavg = 273.486, mult=25.0525
+Maximum displacement: 136.35
+Average displacement: 5.51
+Iteration 97:
+laplavg = 10.9165, tavg = 274.464, mult=25.1421
+Maximum displacement: 136.91
+Average displacement: 5.54
+Iteration 98:
+laplavg = 10.9165, tavg = 278.106, mult=25.4757
+Maximum displacement: 136.24
+Average displacement: 5.51
+Iteration 99:
+laplavg = 10.9165, tavg = 278.332, mult=25.4964
+Maximum displacement: 137.16
+Average displacement: 5.55
+Iteration 100:
+laplavg = 10.9165, tavg = 281.776, mult=25.8119
+Maximum displacement: 136.58
+Average displacement: 5.53
+Target nodespacing: 10 10 10
+Nodespacing: 80 80 80
+Nodespacing: 40 40 40
+Nodespacing: 20 20 20
+Iteration 1:
+laplavg = 12.1847, tavg = 10.3857, mult=0.85236
+ lo: 2.(2623.57) mid: 10.(3937.58) hi: 20.(2.31332)
+Calculated smoothing factor: 8.65
+Maximum displacement: 254.78
+Average displacement: 3.29
+Iteration 2:
+laplavg = 12.1847, tavg = 44.1552, mult=3.62383
+Maximum displacement: 184.34
+Average displacement: 2.71
+Iteration 3:
+laplavg = 12.1847, tavg = 45.2117, mult=3.71054
+Maximum displacement: 178.26
+Average displacement: 2.72
+Iteration 4:
+laplavg = 12.1847, tavg = 46.0136, mult=3.77635
+Maximum displacement: 178.49
+Average displacement: 2.75
+Iteration 5:
+laplavg = 12.1847, tavg = 47.4333, mult=3.89287
+Maximum displacement: 177.16
+Average displacement: 2.76
+Iteration 6:
+laplavg = 12.1847, tavg = 48.4604, mult=3.97716
+Maximum displacement: 177.98
+Average displacement: 2.79
+Iteration 7:
+laplavg = 12.1847, tavg = 49.9541, mult=4.09975
+Maximum displacement: 178.21
+Average displacement: 2.80
+Iteration 8:
+laplavg = 12.1847, tavg = 50.6602, mult=4.1577
+Maximum displacement: 180.86
+Average displacement: 2.85
+Iteration 9:
+laplavg = 12.1847, tavg = 52.1441, mult=4.27949
+Maximum displacement: 181.17
+Average displacement: 2.87
+Iteration 10:
+laplavg = 12.1847, tavg = 53.1148, mult=4.35914
+Maximum displacement: 183.24
+Average displacement: 2.91
+Iteration 11:
+laplavg = 12.1847, tavg = 54.2757, mult=4.45442
+Maximum displacement: 184.85
+Average displacement: 2.95
+Iteration 12:
+laplavg = 12.1847, tavg = 55.52, mult=4.55654
+Maximum displacement: 186.31
+Average displacement: 2.99
+Iteration 13:
+laplavg = 12.1847, tavg = 57.0918, mult=4.68554
+Maximum displacement: 187.05
+Average displacement: 3.01
+Iteration 14:
+laplavg = 12.1847, tavg = 58.5658, mult=4.80651
+Maximum displacement: 188.15
+Average displacement: 3.04
+Iteration 15:
+laplavg = 12.1847, tavg = 60.5347, mult=4.9681
+Maximum displacement: 188.00
+Average displacement: 3.05
+Iteration 16:
+laplavg = 12.1847, tavg = 62.8991, mult=5.16215
+Maximum displacement: 187.01
+Average displacement: 3.05
+Iteration 17:
+laplavg = 12.1847, tavg = 64.8805, mult=5.32476
+Maximum displacement: 187.31
+Average displacement: 3.06
+Iteration 18:
+laplavg = 12.1847, tavg = 67.9578, mult=5.57731
+Maximum displacement: 185.11
+Average displacement: 3.03
+Iteration 19:
+laplavg = 12.1847, tavg = 70.3222, mult=5.77136
+Maximum displacement: 184.94
+Average displacement: 3.04
+Iteration 20:
+laplavg = 12.1847, tavg = 73.9091, mult=6.06574
+Maximum displacement: 182.07
+Average displacement: 3.00
+Iteration 21:
+laplavg = 12.1847, tavg = 77.5692, mult=6.36613
+Maximum displacement: 179.35
+Average displacement: 2.96
+Iteration 22:
+laplavg = 12.1847, tavg = 82.1365, mult=6.74096
+Maximum displacement: 175.08
+Average displacement: 2.90
+Iteration 23:
+laplavg = 12.1847, tavg = 86.8366, mult=7.1267
+Maximum displacement: 171.01
+Average displacement: 2.85
+Iteration 24:
+laplavg = 12.1847, tavg = 92.645, mult=7.6034
+Maximum displacement: 165.45
+Average displacement: 2.77
+Iteration 25:
+laplavg = 12.1847, tavg = 98.6732, mult=8.09814
+Maximum displacement: 160.13
+Average displacement: 2.69
+Iteration 26:
+laplavg = 12.1847, tavg = 105.578, mult=8.66479
+Maximum displacement: 154.82
+Average displacement: 2.60
+Iteration 27:
+laplavg = 12.1847, tavg = 112.794, mult=9.25706
+Maximum displacement: 150.45
+Average displacement: 2.52
+Iteration 28:
+laplavg = 12.1847, tavg = 120.485, mult=9.88825
+Maximum displacement: 146.10
+Average displacement: 2.43
+Iteration 29:
+laplavg = 12.1847, tavg = 128.667, mult=10.5598
+Maximum displacement: 141.74
+Average displacement: 2.35
+Iteration 30:
+laplavg = 12.1847, tavg = 136.743, mult=11.2226
+Maximum displacement: 137.82
+Average displacement: 2.28
+Iteration 31:
+laplavg = 12.1847, tavg = 144.69, mult=11.8748
+Maximum displacement: 134.40
+Average displacement: 2.22
+Iteration 32:
+laplavg = 12.1847, tavg = 152.875, mult=12.5465
+Maximum displacement: 131.07
+Average displacement: 2.16
+Iteration 33:
+laplavg = 12.1847, tavg = 160.778, mult=13.1951
+Maximum displacement: 128.18
+Average displacement: 2.11
+Iteration 34:
+laplavg = 12.1847, tavg = 168.917, mult=13.8631
+Maximum displacement: 125.43
+Average displacement: 2.06
+Iteration 35:
+laplavg = 12.1847, tavg = 176.759, mult=14.5067
+Maximum displacement: 122.99
+Average displacement: 2.02
+Iteration 36:
+laplavg = 12.1847, tavg = 184.534, mult=15.1447
+Maximum displacement: 120.85
+Average displacement: 1.99
+Iteration 37:
+laplavg = 12.1847, tavg = 192.215, mult=15.7751
+Maximum displacement: 118.83
+Average displacement: 1.95
+Iteration 38:
+laplavg = 12.1847, tavg = 200.068, mult=16.4196
+Maximum displacement: 116.94
+Average displacement: 1.93
+Iteration 39:
+laplavg = 12.1847, tavg = 208.034, mult=17.0734
+Maximum displacement: 115.11
+Average displacement: 1.90
+Iteration 40:
+laplavg = 12.1847, tavg = 214.777, mult=17.6268
+Maximum displacement: 113.84
+Average displacement: 1.88
+Iteration 41:
+laplavg = 12.1847, tavg = 221.905, mult=18.2118
+Maximum displacement: 112.63
+Average displacement: 1.86
+Iteration 42:
+laplavg = 12.1847, tavg = 228.948, mult=18.7898
+Maximum displacement: 111.49
+Average displacement: 1.85
+Iteration 43:
+laplavg = 12.1847, tavg = 234.839, mult=19.2733
+Maximum displacement: 110.95
+Average displacement: 1.84
+Iteration 44:
+laplavg = 12.1847, tavg = 241.156, mult=19.7917
+Maximum displacement: 110.54
+Average displacement: 1.84
+Iteration 45:
+laplavg = 12.1847, tavg = 246.483, mult=20.2289
+Maximum displacement: 110.56
+Average displacement: 1.84
+Iteration 46:
+laplavg = 12.1847, tavg = 252.158, mult=20.6947
+Maximum displacement: 110.57
+Average displacement: 1.84
+Iteration 47:
+laplavg = 12.1847, tavg = 257.639, mult=21.1445
+Maximum displacement: 110.65
+Average displacement: 1.84
+Iteration 48:
+laplavg = 12.1847, tavg = 263.696, mult=21.6416
+Maximum displacement: 110.58
+Average displacement: 1.84
+Iteration 49:
+laplavg = 12.1847, tavg = 269.417, mult=22.1111
+Maximum displacement: 110.77
+Average displacement: 1.84
+Iteration 50:
+laplavg = 12.1847, tavg = 276.059, mult=22.6562
+Maximum displacement: 110.75
+Average displacement: 1.84
+Iteration 51:
+laplavg = 12.1847, tavg = 282.461, mult=23.1817
+Maximum displacement: 110.82
+Average displacement: 1.84
+Iteration 52:
+laplavg = 12.1847, tavg = 289.183, mult=23.7333
+Maximum displacement: 110.97
+Average displacement: 1.84
+Iteration 53:
+laplavg = 12.1847, tavg = 295.628, mult=24.2623
+Maximum displacement: 111.20
+Average displacement: 1.85
+Iteration 54:
+laplavg = 12.1847, tavg = 303.284, mult=24.8906
+Maximum displacement: 111.09
+Average displacement: 1.84
+Iteration 55:
+laplavg = 12.1847, tavg = 310.653, mult=25.4953
+Maximum displacement: 111.11
+Average displacement: 1.84
+Iteration 56:
+laplavg = 12.1847, tavg = 318.322, mult=26.1248
+Maximum displacement: 111.18
+Average displacement: 1.84
+Iteration 57:
+laplavg = 12.1847, tavg = 325.478, mult=26.712
+Maximum displacement: 111.41
+Average displacement: 1.85
+Iteration 58:
+laplavg = 12.1847, tavg = 333.971, mult=27.4091
+Maximum displacement: 111.31
+Average displacement: 1.84
+Iteration 59:
+laplavg = 12.1847, tavg = 341.869, mult=28.0573
+Maximum displacement: 111.45
+Average displacement: 1.85
+Iteration 60:
+laplavg = 12.1847, tavg = 351.353, mult=28.8357
+Maximum displacement: 111.25
+Average displacement: 1.84
+Iteration 61:
+laplavg = 12.1847, tavg = 359.699, mult=29.5206
+Maximum displacement: 111.33
+Average displacement: 1.84
+Iteration 62:
+laplavg = 12.1847, tavg = 369.662, mult=30.3383
+Maximum displacement: 111.12
+Average displacement: 1.84
+Iteration 63:
+laplavg = 12.1847, tavg = 379.205, mult=31.1214
+Maximum displacement: 111.04
+Average displacement: 1.83
+Iteration 64:
+laplavg = 12.1847, tavg = 389.238, mult=31.9449
+Maximum displacement: 111.01
+Average displacement: 1.83
+Iteration 65:
+laplavg = 12.1847, tavg = 400.754, mult=32.89
+Maximum displacement: 110.62
+Average displacement: 1.82
+Iteration 66:
+laplavg = 12.1847, tavg = 410.553, mult=33.6942
+Maximum displacement: 110.60
+Average displacement: 1.82
+Iteration 67:
+laplavg = 12.1847, tavg = 423.336, mult=34.7433
+Maximum displacement: 110.08
+Average displacement: 1.81
+Iteration 68:
+laplavg = 12.1847, tavg = 435.381, mult=35.7319
+Maximum displacement: 109.73
+Average displacement: 1.81
+Iteration 69:
+laplavg = 12.1847, tavg = 446.963, mult=36.6824
+Maximum displacement: 109.56
+Average displacement: 1.80
+Iteration 70:
+laplavg = 12.1847, tavg = 461.608, mult=37.8843
+Maximum displacement: 108.96
+Average displacement: 1.79
+Iteration 71:
+laplavg = 12.1847, tavg = 475.058, mult=38.9881
+Maximum displacement: 108.42
+Average displacement: 1.78
+Iteration 72:
+laplavg = 12.1847, tavg = 489.792, mult=40.1974
+Maximum displacement: 107.83
+Average displacement: 1.77
+Iteration 73:
+laplavg = 12.1847, tavg = 504.767, mult=41.4264
+Maximum displacement: 107.24
+Average displacement: 1.76
+Iteration 74:
+laplavg = 12.1847, tavg = 519.387, mult=42.6262
+Maximum displacement: 106.68
+Average displacement: 1.75
+Iteration 75:
+laplavg = 12.1847, tavg = 535.314, mult=43.9333
+Maximum displacement: 106.04
+Average displacement: 1.74
+Iteration 76:
+laplavg = 12.1847, tavg = 551.947, mult=45.2984
+Maximum displacement: 105.43
+Average displacement: 1.73
+Iteration 77:
+laplavg = 12.1847, tavg = 570.258, mult=46.8012
+Maximum displacement: 104.56
+Average displacement: 1.71
+Iteration 78:
+laplavg = 12.1847, tavg = 588.705, mult=48.3152
+Maximum displacement: 103.68
+Average displacement: 1.70
+Iteration 79:
+laplavg = 12.1847, tavg = 606.79, mult=49.7995
+Maximum displacement: 102.89
+Average displacement: 1.69
+Iteration 80:
+laplavg = 12.1847, tavg = 624.592, mult=51.2605
+Maximum displacement: 102.15
+Average displacement: 1.67
+Iteration 81:
+laplavg = 12.1847, tavg = 642.954, mult=52.7675
+Maximum displacement: 101.34
+Average displacement: 1.66
+Iteration 82:
+laplavg = 12.1847, tavg = 662.358, mult=54.3599
+Maximum displacement: 100.56
+Average displacement: 1.65
+Iteration 83:
+laplavg = 12.1847, tavg = 683.769, mult=56.1171
+Maximum displacement: 99.66
+Average displacement: 1.63
+Iteration 84:
+laplavg = 12.1847, tavg = 703.015, mult=57.6967
+Maximum displacement: 99.05
+Average displacement: 1.62
+Iteration 85:
+laplavg = 12.1847, tavg = 728.033, mult=59.7499
+Maximum displacement: 97.81
+Average displacement: 1.60
+Iteration 86:
+laplavg = 12.1847, tavg = 749.284, mult=61.4939
+Maximum displacement: 96.92
+Average displacement: 1.59
+Iteration 87:
+laplavg = 12.1847, tavg = 771.556, mult=63.3219
+Maximum displacement: 95.99
+Average displacement: 1.57
+Iteration 88:
+laplavg = 12.1847, tavg = 793.609, mult=65.1318
+Maximum displacement: 95.11
+Average displacement: 1.56
+Iteration 89:
+laplavg = 12.1847, tavg = 815.322, mult=66.9137
+Maximum displacement: 94.27
+Average displacement: 1.55
+Iteration 90:
+laplavg = 12.1847, tavg = 836.942, mult=68.6881
+Maximum displacement: 93.47
+Average displacement: 1.54
+Iteration 91:
+laplavg = 12.1847, tavg = 861.761, mult=70.725
+Maximum displacement: 92.51
+Average displacement: 1.52
+Iteration 92:
+laplavg = 12.1847, tavg = 886.787, mult=72.7789
+Maximum displacement: 91.57
+Average displacement: 1.51
+Iteration 93:
+laplavg = 12.1847, tavg = 911.791, mult=74.831
+Maximum displacement: 90.65
+Average displacement: 1.49
+Iteration 94:
+laplavg = 12.1847, tavg = 940.153, mult=77.1586
+Maximum displacement: 89.50
+Average displacement: 1.48
+Iteration 95:
+laplavg = 12.1847, tavg = 967.013, mult=79.3631
+Maximum displacement: 88.48
+Average displacement: 1.46
+Iteration 96:
+laplavg = 12.1847, tavg = 994.176, mult=81.5924
+Maximum displacement: 87.46
+Average displacement: 1.45
+Iteration 97:
+laplavg = 12.1847, tavg = 1019.07, mult=83.6357
+Maximum displacement: 86.64
+Average displacement: 1.43
+Iteration 98:
+laplavg = 12.1847, tavg = 1044.44, mult=85.7174
+Maximum displacement: 85.83
+Average displacement: 1.42
+Iteration 99:
+laplavg = 12.1847, tavg = 1070.66, mult=87.8691
+Maximum displacement: 84.98
+Average displacement: 1.41
+Iteration 100:
+laplavg = 12.1847, tavg = 1095.13, mult=89.8777
+Maximum displacement: 84.24
+Average displacement: 1.40
+Target nodespacing: 10 10 10
+Nodespacing: 80 80 80
+Nodespacing: 40 40 40
+Nodespacing: 20 20 20
+Nodespacing: 10 10 10
+Iteration 1:
+laplavg = 12.9943, tavg = 1.38401, mult=0.106509
+ lo: 2.(281.946) mid: 10.(367.336) hi: 20.(2513.74)
+Calculated smoothing factor: 5.53
+Maximum displacement: 573.55
+Average displacement: 2.20
+Iteration 2:
+laplavg = 12.9943, tavg = 201.572, mult=15.5123
+Maximum displacement: 150.82
+Average displacement: 0.46
+Iteration 3:
+laplavg = 12.9943, tavg = 212.929, mult=16.3863
+Maximum displacement: 83.29
+Average displacement: 0.44
+Iteration 4:
+laplavg = 12.9943, tavg = 224.816, mult=17.3011
+Maximum displacement: 72.11
+Average displacement: 0.44
+Iteration 5:
+laplavg = 12.9943, tavg = 238.521, mult=18.3557
+Maximum displacement: 69.38
+Average displacement: 0.42
+Iteration 6:
+laplavg = 12.9943, tavg = 251.022, mult=19.3178
+Maximum displacement: 67.42
+Average displacement: 0.42
+Iteration 7:
+laplavg = 12.9943, tavg = 264.05, mult=20.3204
+Maximum displacement: 65.80
+Average displacement: 0.41
+Iteration 8:
+laplavg = 12.9943, tavg = 276.519, mult=21.28
+Maximum displacement: 64.57
+Average displacement: 0.40
+Iteration 9:
+laplavg = 12.9943, tavg = 288.942, mult=22.236
+Maximum displacement: 63.56
+Average displacement: 0.40
+Iteration 10:
+laplavg = 12.9943, tavg = 303.572, mult=23.3618
+Maximum displacement: 62.35
+Average displacement: 0.39
+Iteration 11:
+laplavg = 12.9943, tavg = 319.574, mult=24.5933
+Maximum displacement: 61.15
+Average displacement: 0.38
+Iteration 12:
+laplavg = 12.9943, tavg = 334.836, mult=25.7678
+Maximum displacement: 60.22
+Average displacement: 0.38
+Iteration 13:
+laplavg = 12.9943, tavg = 350.444, mult=26.9689
+Maximum displacement: 59.33
+Average displacement: 0.37
+Iteration 14:
+laplavg = 12.9943, tavg = 365.427, mult=28.122
+Maximum displacement: 58.51
+Average displacement: 0.37
+Iteration 15:
+laplavg = 12.9943, tavg = 381.899, mult=29.3896
+Maximum displacement: 57.57
+Average displacement: 0.36
+Iteration 16:
+laplavg = 12.9943, tavg = 399.818, mult=30.7686
+Maximum displacement: 56.60
+Average displacement: 0.36
+Iteration 17:
+laplavg = 12.9943, tavg = 421.805, mult=32.4606
+Maximum displacement: 55.24
+Average displacement: 0.35
+Iteration 18:
+laplavg = 12.9943, tavg = 444.664, mult=34.2198
+Maximum displacement: 53.93
+Average displacement: 0.34
+Iteration 19:
+laplavg = 12.9943, tavg = 467.325, mult=35.9637
+Maximum displacement: 52.75
+Average displacement: 0.33
+Iteration 20:
+laplavg = 12.9943, tavg = 489.007, mult=37.6322
+Maximum displacement: 51.69
+Average displacement: 0.33
+Iteration 21:
+laplavg = 12.9943, tavg = 510.749, mult=39.3054
+Maximum displacement: 50.66
+Average displacement: 0.32
+Iteration 22:
+laplavg = 12.9943, tavg = 536.811, mult=41.3111
+Maximum displacement: 49.38
+Average displacement: 0.31
+Iteration 23:
+laplavg = 12.9943, tavg = 563.962, mult=43.4005
+Maximum displacement: 48.13
+Average displacement: 0.31
+Iteration 24:
+laplavg = 12.9943, tavg = 594.126, mult=45.7219
+Maximum displacement: 46.84
+Average displacement: 0.30
+Iteration 25:
+laplavg = 12.9943, tavg = 626.707, mult=48.2292
+Maximum displacement: 45.49
+Average displacement: 0.29
+Iteration 26:
+laplavg = 12.9943, tavg = 658.987, mult=50.7134
+Maximum displacement: 44.22
+Average displacement: 0.29
+Iteration 27:
+laplavg = 12.9943, tavg = 689.631, mult=53.0716
+Maximum displacement: 43.12
+Average displacement: 0.28
+Iteration 28:
+laplavg = 12.9943, tavg = 721.338, mult=55.5117
+Maximum displacement: 42.02
+Average displacement: 0.28
+Iteration 29:
+laplavg = 12.9943, tavg = 754.066, mult=58.0303
+Maximum displacement: 40.95
+Average displacement: 0.27
+Iteration 30:
+laplavg = 12.9943, tavg = 786.619, mult=60.5355
+Maximum displacement: 40.00
+Average displacement: 0.27
+Iteration 31:
+laplavg = 12.9943, tavg = 821.592, mult=63.2269
+Maximum displacement: 39.02
+Average displacement: 0.26
+Iteration 32:
+laplavg = 12.9943, tavg = 859.817, mult=66.1685
+Maximum displacement: 37.99
+Average displacement: 0.26
+Iteration 33:
+laplavg = 12.9943, tavg = 898.163, mult=69.1195
+Maximum displacement: 37.01
+Average displacement: 0.25
+Iteration 34:
+laplavg = 12.9943, tavg = 933.334, mult=71.8261
+Maximum displacement: 36.16
+Average displacement: 0.25
+Iteration 35:
+laplavg = 12.9943, tavg = 968.241, mult=74.5125
+Maximum displacement: 35.46
+Average displacement: 0.25
+Iteration 36:
+laplavg = 12.9943, tavg = 1004.9, mult=77.3336
+Maximum displacement: 34.87
+Average displacement: 0.24
+Iteration 37:
+laplavg = 12.9943, tavg = 1042.94, mult=80.2613
+Maximum displacement: 34.30
+Average displacement: 0.24
+Iteration 38:
+laplavg = 12.9943, tavg = 1084.97, mult=83.4956
+Maximum displacement: 33.73
+Average displacement: 0.24
+Iteration 39:
+laplavg = 12.9943, tavg = 1129.88, mult=86.9513
+Maximum displacement: 33.20
+Average displacement: 0.23
+Iteration 40:
+laplavg = 12.9943, tavg = 1175.54, mult=90.4658
+Maximum displacement: 32.68
+Average displacement: 0.23
+Iteration 41:
+laplavg = 12.9943, tavg = 1220.67, mult=93.9388
+Maximum displacement: 32.16
+Average displacement: 0.23
+Iteration 42:
+laplavg = 12.9943, tavg = 1264.26, mult=97.293
+Maximum displacement: 31.69
+Average displacement: 0.22
+Iteration 43:
+laplavg = 12.9943, tavg = 1305.89, mult=100.497
+Maximum displacement: 31.27
+Average displacement: 0.22
+Iteration 44:
+laplavg = 12.9943, tavg = 1349.37, mult=103.843
+Maximum displacement: 30.84
+Average displacement: 0.22
+Iteration 45:
+laplavg = 12.9943, tavg = 1390.84, mult=107.034
+Maximum displacement: 30.47
+Average displacement: 0.21
+Iteration 46:
+laplavg = 12.9943, tavg = 1436.61, mult=110.556
+Maximum displacement: 30.05
+Average displacement: 0.21
+Iteration 47:
+laplavg = 12.9943, tavg = 1485.28, mult=114.302
+Maximum displacement: 29.65
+Average displacement: 0.21
+Iteration 48:
+laplavg = 12.9943, tavg = 1539.42, mult=118.468
+Maximum displacement: 29.22
+Average displacement: 0.21
+Iteration 49:
+laplavg = 12.9943, tavg = 1597.11, mult=122.908
+Maximum displacement: 28.75
+Average displacement: 0.20
+Iteration 50:
+laplavg = 12.9943, tavg = 1650.54, mult=127.02
+Maximum displacement: 28.36
+Average displacement: 0.20
+Iteration 51:
+laplavg = 12.9943, tavg = 1704.16, mult=131.146
+Maximum displacement: 27.98
+Average displacement: 0.20
+Iteration 52:
+laplavg = 12.9943, tavg = 1759.58, mult=135.411
+Maximum displacement: 27.63
+Average displacement: 0.20
+Iteration 53:
+laplavg = 12.9943, tavg = 1813.81, mult=139.584
+Maximum displacement: 27.30
+Average displacement: 0.19
+Iteration 54:
+laplavg = 12.9943, tavg = 1867.97, mult=143.752
+Maximum displacement: 26.99
+Average displacement: 0.19
+Iteration 55:
+laplavg = 12.9943, tavg = 1924.18, mult=148.078
+Maximum displacement: 26.68
+Average displacement: 0.19
+Iteration 56:
+laplavg = 12.9943, tavg = 1980.47, mult=152.41
+Maximum displacement: 26.35
+Average displacement: 0.19
+Iteration 57:
+laplavg = 12.9943, tavg = 2038., mult=156.837
+Maximum displacement: 26.04
+Average displacement: 0.18
+Iteration 58:
+laplavg = 12.9943, tavg = 2093.11, mult=161.079
+Maximum displacement: 25.78
+Average displacement: 0.18
+Iteration 59:
+laplavg = 12.9943, tavg = 2153.23, mult=165.705
+Maximum displacement: 25.49
+Average displacement: 0.18
+Iteration 60:
+laplavg = 12.9943, tavg = 2210.28, mult=170.096
+Maximum displacement: 25.23
+Average displacement: 0.18
+Iteration 61:
+laplavg = 12.9943, tavg = 2270.72, mult=174.747
+Maximum displacement: 24.97
+Average displacement: 0.18
+Iteration 62:
+laplavg = 12.9943, tavg = 2328.9, mult=179.224
+Maximum displacement: 24.72
+Average displacement: 0.18
+Iteration 63:
+laplavg = 12.9943, tavg = 2388.7, mult=183.826
+Maximum displacement: 24.48
+Average displacement: 0.17
+Iteration 64:
+laplavg = 12.9943, tavg = 2449.15, mult=188.478
+Maximum displacement: 24.25
+Average displacement: 0.17
+Iteration 65:
+laplavg = 12.9943, tavg = 2515.89, mult=193.614
+Maximum displacement: 24.00
+Average displacement: 0.17
+Iteration 66:
+laplavg = 12.9943, tavg = 2587.12, mult=199.096
+Maximum displacement: 23.74
+Average displacement: 0.17
+Iteration 67:
+laplavg = 12.9943, tavg = 2658.91, mult=204.621
+Maximum displacement: 23.48
+Average displacement: 0.17
+Iteration 68:
+laplavg = 12.9943, tavg = 2730.79, mult=210.152
+Maximum displacement: 23.23
+Average displacement: 0.16
+Iteration 69:
+laplavg = 12.9943, tavg = 2798.35, mult=215.352
+Maximum displacement: 22.99
+Average displacement: 0.16
+Iteration 70:
+laplavg = 12.9943, tavg = 2864.52, mult=220.443
+Maximum displacement: 22.77
+Average displacement: 0.16
+Iteration 71:
+laplavg = 12.9943, tavg = 2928.58, mult=225.374
+Maximum displacement: 22.56
+Average displacement: 0.16
+Iteration 72:
+laplavg = 12.9943, tavg = 2991.69, mult=230.23
+Maximum displacement: 22.36
+Average displacement: 0.16
+Iteration 73:
+laplavg = 12.9943, tavg = 3054.8, mult=235.087
+Maximum displacement: 22.16
+Average displacement: 0.16
+Iteration 74:
+laplavg = 12.9943, tavg = 3116.83, mult=239.861
+Maximum displacement: 21.96
+Average displacement: 0.15
+Iteration 75:
+laplavg = 12.9943, tavg = 3180.31, mult=244.746
+Maximum displacement: 21.75
+Average displacement: 0.15
+Iteration 76:
+laplavg = 12.9943, tavg = 3246.28, mult=249.822
+Maximum displacement: 21.55
+Average displacement: 0.15
+Iteration 77:
+laplavg = 12.9943, tavg = 3311.22, mult=254.82
+Maximum displacement: 21.35
+Average displacement: 0.15
+Iteration 78:
+laplavg = 12.9943, tavg = 3376.76, mult=259.863
+Maximum displacement: 21.15
+Average displacement: 0.15
+Iteration 79:
+laplavg = 12.9943, tavg = 3444.72, mult=265.094
+Maximum displacement: 20.96
+Average displacement: 0.15
+Iteration 80:
+laplavg = 12.9943, tavg = 3511.22, mult=270.211
+Maximum displacement: 20.78
+Average displacement: 0.15
+Iteration 81:
+laplavg = 12.9943, tavg = 3584.27, mult=275.833
+Maximum displacement: 20.57
+Average displacement: 0.14
+Iteration 82:
+laplavg = 12.9943, tavg = 3651.27, mult=280.989
+Maximum displacement: 20.38
+Average displacement: 0.14
+Iteration 83:
+laplavg = 12.9943, tavg = 3723.51, mult=286.548
+Maximum displacement: 20.19
+Average displacement: 0.14
+Iteration 84:
+laplavg = 12.9943, tavg = 3788.73, mult=291.567
+Maximum displacement: 20.02
+Average displacement: 0.14
+Iteration 85:
+laplavg = 12.9943, tavg = 3859.45, mult=297.01
+Maximum displacement: 19.85
+Average displacement: 0.14
+Iteration 86:
+laplavg = 12.9943, tavg = 3934.54, mult=302.788
+Maximum displacement: 19.66
+Average displacement: 0.14
+Iteration 87:
+laplavg = 12.9943, tavg = 4005.19, mult=308.226
+Maximum displacement: 19.49
+Average displacement: 0.14
+Iteration 88:
+laplavg = 12.9943, tavg = 4077.1, mult=313.76
+Maximum displacement: 19.34
+Average displacement: 0.13
+Iteration 89:
+laplavg = 12.9943, tavg = 4154.98, mult=319.753
+Maximum displacement: 19.17
+Average displacement: 0.13
+Iteration 90:
+laplavg = 12.9943, tavg = 4227.94, mult=325.368
+Maximum displacement: 19.03
+Average displacement: 0.13
+Iteration 91:
+laplavg = 12.9943, tavg = 4302.66, mult=331.118
+Maximum displacement: 18.88
+Average displacement: 0.13
+Iteration 92:
+laplavg = 12.9943, tavg = 4374.51, mult=336.647
+Maximum displacement: 18.74
+Average displacement: 0.13
+Iteration 93:
+laplavg = 12.9943, tavg = 4441.13, mult=341.774
+Maximum displacement: 18.60
+Average displacement: 0.13
+Iteration 94:
+laplavg = 12.9943, tavg = 4504.13, mult=346.622
+Maximum displacement: 18.48
+Average displacement: 0.13
+Iteration 95:
+laplavg = 12.9943, tavg = 4571.61, mult=351.815
+Maximum displacement: 18.35
+Average displacement: 0.13
+Iteration 96:
+laplavg = 12.9943, tavg = 4647.13, mult=357.627
+Maximum displacement: 18.21
+Average displacement: 0.13
+Iteration 97:
+laplavg = 12.9943, tavg = 4715.08, mult=362.856
+Maximum displacement: 18.08
+Average displacement: 0.12
+Iteration 98:
+laplavg = 12.9943, tavg = 4778.93, mult=367.77
+Maximum displacement: 17.97
+Average displacement: 0.12
+Iteration 99:
+laplavg = 12.9943, tavg = 4843.36, mult=372.728
+Maximum displacement: 17.85
+Average displacement: 0.12
+Iteration 100:
+laplavg = 12.9943, tavg = 4908.52, mult=377.743
+Maximum displacement: 17.74
+Average displacement: 0.12
+Writing dataset: registered.xdmf.h5:/registered
+Writing dataset: map.xdmf.h5:/map/x
+Writing dataset: map.xdmf.h5:/map/nodes_x
+Writing dataset: map.xdmf.h5:/map/y
+Writing dataset: map.xdmf.h5:/map/nodes_y
+Writing dataset: map.xdmf.h5:/map/z
+Writing dataset: map.xdmf.h5:/map/nodes_z
+Elapsed time: 3234.06 s
+
+### HOST INFO ###
+
+sharc-node162.shef.ac.uk 28 insigneo-imsb.q@sharc-node162.shef.ac.uk UNDEFINED

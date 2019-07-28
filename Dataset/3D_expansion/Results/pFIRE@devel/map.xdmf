@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Xdmf Version="3.0">
+    <Domain>
+        <Grid Name="/map_grid" GridType="Uniform">
+            <Topology TopologyType="3DCoRectMesh" Dimensions="11 11 6"/>
+            <Geometry GeometryType="Origin_DxDyDz">
+                <DataItem Name="Origin" Dimensions="3" NumberType="Float" Format="XML">-0.5 -0.5 -0.5</DataItem>
+                <DataItem Name="Spacing" Dimensions="3" NumberType="Float" Format="XML">20 20 20</DataItem>
+            </Geometry>
+            <Attribute Name="/map" AttributeType="Vector" Center="Node">
+                <DataItem ItemType="Function" Dimensions="11 11 6 3" Function="join($0, $1, $2)"/>
+                <DataItem Name="dx" Format="HDF" Dimensions="11 11 6">map.xdmf.h5:/map/x</DataItem>
+                <DataItem Name="dy" Format="HDF" Dimensions="11 11 6">map.xdmf.h5:/map/y</DataItem>
+                <DataItem Name="dz" Format="HDF" Dimensions="11 11 6">map.xdmf.h5:/map/z</DataItem>
+            </Attribute>
+        </Grid>
+    </Domain>
+</Xdmf>

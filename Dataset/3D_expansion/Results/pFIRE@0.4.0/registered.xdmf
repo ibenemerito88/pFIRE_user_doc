@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Xdmf Version="3.0">
+    <Domain>
+        <Grid Name="/registered_grid" GridType="Uniform">
+            <Topology TopologyType="3DCoRectMesh" Dimensions="101 201 201"/>
+            <Geometry GeometryType="Origin_DxDyDz">
+                <DataItem Name="Origin" Dimensions="3" NumberType="Float" Format="XML">0 0 0</DataItem>
+                <DataItem Name="Spacing" Dimensions="3" NumberType="Float" Format="XML">1 1 1</DataItem>
+            </Geometry>
+            <Attribute Name="/registered" AttributeType="Scalar" Center="Cell">
+                <DataItem Format="HDF" Dimensions="100 200 200">registered.xdmf.h5:/registered</DataItem>
+            </Attribute>
+        </Grid>
+    </Domain>
+</Xdmf>
