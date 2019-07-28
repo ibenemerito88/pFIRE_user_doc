@@ -1,0 +1,22 @@
+#!/bin/bash
+#$ -pe smp 28
+#$ -l h_vmem=50G
+#$ -l h_rt=15:30:00 
+#$ -l excl=true
+#$ -N pfire_develop_brain
+#$ -P insigneo-imsb
+#$ -q insigneo-imsb.q
+#$ -M i.benemerito@sheffield.ac.uk
+#$ -m bea
+#£ -j y
+
+export SPACK_ROOT="/usr/local/community/rse/spack"
+export PATH="${SPACK_ROOT}:${PATH}"
+source $SPACK_ROOT/share/spack/setup-env.sh
+
+spack load --dependencies pfire@devel+double
+
+mpirun -np $NSLOTS pfire run_pfire.conf
+
+echo -e "\n### HOST INFO ###\n"
+cat $PE_HOSTFILE

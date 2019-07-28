@@ -14,7 +14,7 @@ Map      Structure, containing the results before they are printed to .txt
 
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-cd(strcat(dir_res,'/pFIRE@develop'))
+cd(strcat(dir_res,'/pFIRE@devel'))
 pfiredev.name = 'pfire@devel';
 
 % Extract nodal coordinates and construct the grid.

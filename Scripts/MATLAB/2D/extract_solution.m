@@ -43,7 +43,7 @@ clc
 
 init = pwd;
 % Choose the solution to visualise
-sol = input('Select 2D solution: [1] 2D_Compr_X [2] 2D_expansion [3] 2D_shearx \n');
+sol = input('Select 2D solution: [1] 2D_Compr_X [2] 2D_expansion [3] 2D_shearx [4] 2D_brain \n');
 
 switch sol
     case 1
@@ -52,6 +52,8 @@ switch sol
         sol = '2D_expansion';
     case 3
         sol = '2D_shearx';
+    case 4
+        sol = '2D_brain';
 end
 dir_res = strcat('../../../Dataset/',sol,'/Results');
 VoxelDimension = 1;

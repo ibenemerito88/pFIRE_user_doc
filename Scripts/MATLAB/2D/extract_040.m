@@ -44,6 +44,7 @@ Lremx=0;
 Lremy=0;
 Lremz=0;
 
+    
 disp('write nodes file for ANSYS');
 Nodes = 'nodes.txt';
 FileIDNod = fopen(Nodes,'w+');

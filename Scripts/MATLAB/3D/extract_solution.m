@@ -72,7 +72,7 @@ if strcmp(sol,'ET3')
     shred_ET3
 elseif strcmp(sol,'Tibia_Virtual')
     shred_Tibia
-% elseif strcmp(sol,'3D_expansion')
-%     shred_3Dexp
+elseif strcmp(sol,'3D_expansion')
+    shred_3Dexp
 end
 

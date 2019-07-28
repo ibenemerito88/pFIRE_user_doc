@@ -1,0 +1,10 @@
+/COM,ANSYS RELEASE Release 17.2      BUILD 17.2      UP20160718       15:21:27
+
+ *** ERROR ***                           CP =       0.498   TIME= 15:21:28
+ There are no elements defined.                                          
+
+ *** ERROR ***                           CP =       0.498   TIME= 15:21:28
+ The model data was checked and there were errors found.                 
+  Please check output or errors file (                                   
+ /shared/multisim2/DVC/ShIRTImagesResults/me1ibe/2D_brain/Results/Specim 
+ men1/VOI0/NodeSpacing10/input.err ) for messages.                       
