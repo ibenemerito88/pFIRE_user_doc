@@ -64,9 +64,11 @@ dir_res = strcat('../../../Dataset/',sol,'/Results');
 % Extract solution from ShIRT
 extract_shirt
 % Extract solution from pFIRE@0.4.0
-extract_040
+read_040
+% extract_040
 % Extract solution from pFIRE@devel
-extract_devel
+read_devel
+% extract_devel
 % Extract from ShIRT the solution on the same nodes of pFIRE@devel
 if strcmp(sol,'ET3')
     shred_ET3
