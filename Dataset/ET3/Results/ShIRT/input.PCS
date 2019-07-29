@@ -4,7 +4,7 @@ Computational Applications and System Integration Inc.
 All rights Reserved.
 ******************************************************************************
 
-Job:input	at:Sun Apr 14 19:04:01 2019
+Job:input	at:Thu Jan 31 14:07:06 2019
 
 
 	Number of cores used: 1
@@ -33,11 +33,11 @@ Job:input	at:Sun Apr 14 19:04:01 2019
 
 
 	DETAILS OF PCG SOLVER SETUP TIME(secs)        Cpu        Wall
-	     Gather Finite Element Data              0.00        0.00
-	     Element Matrix Assembly                 0.03        0.05
+	     Gather Finite Element Data              0.01        0.01
+	     Element Matrix Assembly                 0.03        0.08
 
 	DETAILS OF PCG SOLVER SOLUTION TIME(secs)     Cpu        Wall
-	     Preconditioner Construction             0.01        0.03
+	     Preconditioner Construction             0.01        0.02
 	     Preconditioner Factoring                0.00        0.00
 	     Apply Boundary Conditions               0.00        0.00
 	     Preconditioned CG Iterations            0.00        0.00
@@ -49,7 +49,7 @@ Job:input	at:Sun Apr 14 19:04:01 2019
 	               Direct Solve                  0.00        0.00
 ******************************************************************************
 	     TOTAL PCG SOLVER SOLUTION CP TIME      =       0.01 secs
-	     TOTAL PCG SOLVER SOLUTION ELAPSED TIME =       0.03 secs
+	     TOTAL PCG SOLVER SOLUTION ELAPSED TIME =       0.02 secs
 ******************************************************************************
 	Total Memory Usage at CG         :       0.00 MB
 	PCG Memory Usage at CG           :       0.00 MB

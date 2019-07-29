@@ -14,6 +14,7 @@ function check_node_order(method1,method2)
 step = 10;
 % To plot all the nodes use step=1, to plot only few of them increase the
 % value of step
+figure
 for i=1:step:size(method1.N,1)
     plot3(method1.N(i,1),method1.N(i,2),method1.N(i,3),'ro')
     hold on

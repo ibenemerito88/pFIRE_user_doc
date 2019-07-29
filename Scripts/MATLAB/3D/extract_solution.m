@@ -60,15 +60,23 @@ switch sol
         VoxelDimension = 1;
 end
 dir_res = strcat('../../../Dataset/',sol,'/Results');
+% Choose values for mask
+v = [.8 .8 .8];
 
 % Extract solution from ShIRT
 extract_shirt
+shirt_masked = apply_mask(shirt,v);
 % Extract solution from pFIRE@0.4.0
 read_040
+pfire040_masked = apply_mask(pfire040,v);
 % extract_040
 % Extract solution from pFIRE@devel
 read_devel
 % extract_devel
+plot_disp(shirt,pfire040)
+plot_disp(shirt_masked,pfire040_masked)
+
+return
 % Extract from ShIRT the solution on the same nodes of pFIRE@devel
 if strcmp(sol,'ET3')
     shred_ET3
@@ -77,4 +85,5 @@ elseif strcmp(sol,'Tibia_Virtual')
 elseif strcmp(sol,'3D_expansion')
     shred_3Dexp
 end
+
 
